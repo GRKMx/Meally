@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainScreen">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="com.gorkemersizer.mealye.ui.screens.mainscreen.MainScreen"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" />
+    <fragment
+        android:id="@+id/orderScreen"
+        android:name="com.gorkemersizer.mealye.ui.screens.orderscreen.OrderScreen"
+        android:label="fragment_order_screen"
+        tools:layout="@layout/fragment_order_screen" >
+        <action
+            android:id="@+id/action_orderScreen_to_cartScreen"
+            app:destination="@id/cartScreen"
+            app:popUpTo="@id/orderScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartScreen"
+        android:name="com.gorkemersizer.mealye.ui.screens.cartscreen.CartScreen"
+        android:label="fragment_cart_screen"
+        tools:layout="@layout/fragment_cart_screen" />
+    <fragment
+        android:id="@+id/profileScreen"
+        android:name="com.gorkemersizer.mealye.ui.screens.profilescreen.ProfileScreen"
+        android:label="fragment_profile_screen"
+        tools:layout="@layout/fragment_profile_screen" />
+</navigation>

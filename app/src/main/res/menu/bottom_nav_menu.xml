@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/mainScreen"
+        android:title="Main Page"
+        android:icon="@drawable/ic_main_screen"/>
+
+    <item android:id="@+id/orderScreen"
+        android:title="Order"
+        android:icon="@drawable/ic_order_screen"/>
+
+    <item android:id="@+id/cartScreen"
+        android:title="Cart"
+        android:icon="@drawable/ic_cart_screen"/>
+
+    <item android:id="@+id/profileScreen"
+        android:title="Profile"
+        android:icon="@drawable/ic_profile_screen"/>
+
+</menu>

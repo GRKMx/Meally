@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "560628474547",
+    "project_id": "mealye-184d2",
+    "storage_bucket": "mealye-184d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560628474547:android:79d786e812b24ee5c046c6",
+        "android_client_info": {
+          "package_name": "com.gorkemersizer.mealye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560628474547-2ru15tlkrikc2vsfballfir14lqskrp3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZj5g58Ify7TJ5jBXI-3MNmmGTvLrlTLc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560628474547-2ru15tlkrikc2vsfballfir14lqskrp3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
