@@ -8,8 +8,8 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class OrderScreenViewModel @Inject constructor(var yrepo: YemeklerDaoRepository) : ViewModel(),
-    LifecycleOwner {
+class OrderScreenViewModel @Inject constructor(var yrepo: YemeklerDaoRepository) : ViewModel() {
+
     var sepetListesi = MutableLiveData<List<SepetYemekler>>()
 
     init {
@@ -17,16 +17,12 @@ class OrderScreenViewModel @Inject constructor(var yrepo: YemeklerDaoRepository)
         sepetListesi = yrepo.sepetCagir()
     }
 
-    fun sepetiGetirVM(kullanici_adi: String) {
-        yrepo.sepetiGetir(kullanici_adi)
-    }
-
     fun yemekSilVM(sepet_yemek_id: Int, kullanici_adi: String) {
         yrepo.yemekSil(sepet_yemek_id, kullanici_adi)
     }
 
-    override fun getLifecycle(): Lifecycle {
-          return  lifecycle
+    fun sepetiGetirVM(kullanici_adi: String) {
+        yrepo.sepetiGetir(kullanici_adi)
     }
 
 }

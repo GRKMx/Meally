@@ -4,7 +4,6 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.gorkemersizer.mealye.data.entity.*
 import com.gorkemersizer.mealye.retrofit.YemeklerDao
-import com.squareup.picasso.Picasso
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -39,7 +38,7 @@ class YemeklerDaoRepository(var ydao: YemeklerDao) {
                 val basari = response.body()!!.success
                 val mesaj = response.body()!!.message
                 Log.e("Yemek sil","$basari - $mesaj")
-                tumYemekleriAl()
+                sepetiGetir(kullanici_adi)
             }
             override fun onFailure(call: Call<CRUDCevap>, t: Throwable) {}
         })
@@ -53,8 +52,9 @@ class YemeklerDaoRepository(var ydao: YemeklerDao) {
         ydao.sepettekiYemekleriGetir(kullanici_adi).enqueue(object : Callback<SepetYemeklerCevap> {
             override fun onResponse(call: Call<SepetYemeklerCevap>, response: Response<SepetYemeklerCevap>) {
                 val basari = response.body()!!.success
-                val liste = response.body()!!.sepet_yemekler
-                sepetListesi.value = liste
+                val sepetListe = response.body()!!.sepet_yemekler
+                Log.e("SepetGetir","$basari")
+                sepetListesi.value = sepetListe
             }
             override fun onFailure(call: Call<SepetYemeklerCevap>, t: Throwable) {}
         })

@@ -37,13 +37,4 @@ interface YemeklerDao {
         @Field("kullanici_adi") kullanici_adi: String
     ) : Call<CRUDCevap>
 
-    /*
-    @POST("/yemekler/resimler/") //ayran.png
-    @FormUrlEncoded
-    fun yemekResimleriniAl(
-        @Field("yemek_resim_adi") yemek_resim_adi: String //???
-    ) : Call<YemeklerCevap>
-
-     */
-
 }

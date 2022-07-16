@@ -1,6 +1,7 @@
 package com.gorkemersizer.mealye.ui.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -10,6 +11,7 @@ import com.gorkemersizer.mealye.data.entity.SepetYemekler
 import com.gorkemersizer.mealye.databinding.SepetCardDesignBinding
 import com.gorkemersizer.mealye.ui.screens.orderscreen.OrderScreenViewModel
 import com.squareup.picasso.Picasso
+import java.lang.Exception
 
 class SepetAdapter(
     var mContext: Context,
@@ -49,8 +51,9 @@ class SepetAdapter(
         Picasso.get().load("http://kasimadalan.pe.hu/yemekler/resimler/${sepetYemek.yemek_resim_adi}").into(t.imageViewSepetYemek)
         t.buttonSilSepet.setOnClickListener {
             viewModel.yemekSilVM(sepetYemek.sepet_yemek_id.toInt(), kullanici_adi = "guts")
-            notifyItemRemoved(position)
-            notifyDataSetChanged()
+            //notifyItemRemoved(position)
+            //notifyDataSetChanged()
+            //viewModel.sepetListesi.value = viewModel.yrepo.sepetCagir().value
             viewModel.sepetiGetirVM("guts")
         }
 

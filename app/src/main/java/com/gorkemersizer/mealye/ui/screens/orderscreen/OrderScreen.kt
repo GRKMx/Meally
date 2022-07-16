@@ -1,6 +1,7 @@
 package com.gorkemersizer.mealye.ui.screens.orderscreen
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -29,7 +30,6 @@ class OrderScreen : Fragment() {
         viewModel.sepetListesi.observe(viewLifecycleOwner) {
             val adapter = SepetAdapter(requireContext(), it, viewModel)
             binding.sepetAdapter = adapter
-            adapter.notifyDataSetChanged()
         }
         return binding.root
     }
@@ -44,9 +44,11 @@ class OrderScreen : Fragment() {
     fun odemeyeGec(v:View){
         Navigation.gecisYap(v, R.id.action_orderScreen_to_cartScreen)
     }
+    /*
     override fun onResume() {
         super.onResume()
-        viewModel.sepetiGetirVM("guts")
+        //viewModel.sepetiGetirVM("guts")
     }
+     */
 
 }
