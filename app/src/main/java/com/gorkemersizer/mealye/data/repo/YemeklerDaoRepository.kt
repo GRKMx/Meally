@@ -2,6 +2,7 @@ package com.gorkemersizer.mealye.data.repo
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.observe
 import com.gorkemersizer.mealye.data.entity.*
 import com.gorkemersizer.mealye.retrofit.YemeklerDao
 import com.squareup.picasso.Picasso
@@ -12,10 +13,12 @@ import retrofit2.Response
 class YemeklerDaoRepository(var ydao: YemeklerDao) {
     var yemeklerListesi: MutableLiveData<List<Yemekler>>
     var sepetListesi: MutableLiveData<List<SepetYemekler>>
+    var siparisYemekler: MutableLiveData<List<SiparisYemekler>>
 
     init {
         yemeklerListesi = MutableLiveData()
         sepetListesi = MutableLiveData()
+        siparisYemekler = MutableLiveData()
     }
 
     fun yemekleriGetir() : MutableLiveData<List<Yemekler>> {

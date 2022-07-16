@@ -3,6 +3,7 @@ package com.gorkemersizer.mealye.ui.screens.orderscreen
 import androidx.lifecycle.*
 import androidx.recyclerview.widget.RecyclerView
 import com.gorkemersizer.mealye.data.entity.SepetYemekler
+import com.gorkemersizer.mealye.data.entity.SiparisYemekler
 import com.gorkemersizer.mealye.data.repo.YemeklerDaoRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -11,6 +12,7 @@ import javax.inject.Inject
 class OrderScreenViewModel @Inject constructor(var yrepo: YemeklerDaoRepository) : ViewModel(),
     LifecycleOwner {
     var sepetListesi = MutableLiveData<List<SepetYemekler>>()
+    var siparisListesi = MutableLiveData<List<SiparisYemekler>>()
 
     init {
         sepetiGetirVM("guts")
@@ -27,6 +29,12 @@ class OrderScreenViewModel @Inject constructor(var yrepo: YemeklerDaoRepository)
 
     override fun getLifecycle(): Lifecycle {
           return  lifecycle
+    }
+
+    fun siparisListesiAl(){
+        siparisListesi.observe(this) {
+
+        }
     }
 
 }
