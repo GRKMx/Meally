@@ -44,12 +44,9 @@ class OrderScreen : Fragment() {
     fun odemeyeGec(v:View){
         Navigation.gecisYap(v, R.id.action_orderScreen_to_cartScreen)
     }
-
-    /*
     override fun onResume() {
         super.onResume()
         viewModel.sepetiGetirVM("guts")
     }
-     */
 
 }
