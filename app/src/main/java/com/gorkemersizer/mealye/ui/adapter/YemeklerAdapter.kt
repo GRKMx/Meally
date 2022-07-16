@@ -47,17 +47,9 @@ class YemeklerAdapter(
 
         t.imageViewIncreaseButton.setOnClickListener {
 
-            //viewModel.adetSayisiniArtir(yemek.yemek_siparis_adet)
-            //yemek.yemek_siparis_adet ++
             yemek.yemek_siparis_adet = viewModel.adetSayisiniArtir(yemek.yemek_siparis_adet)
             t.textViewAdet.text = yemek.yemek_siparis_adet.toString()
 
-            /*
-            viewModel.adetSayisi.observe(viewModel) { s ->
-                t.textViewAdet.text = s.toString()
-            }
-
-             */
         }
 
         t.buttonAdd.setOnClickListener {
