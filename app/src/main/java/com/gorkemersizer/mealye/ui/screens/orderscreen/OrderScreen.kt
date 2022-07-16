@@ -16,6 +16,7 @@ import com.gorkemersizer.mealye.ui.adapter.SepetAdapter
 import com.gorkemersizer.mealye.ui.adapter.YemeklerAdapter
 import com.gorkemersizer.mealye.util.gecisYap
 import dagger.hilt.android.AndroidEntryPoint
+import java.lang.Exception
 
 @AndroidEntryPoint
 class OrderScreen : Fragment() {
@@ -30,6 +31,7 @@ class OrderScreen : Fragment() {
         viewModel.sepetListesi.observe(viewLifecycleOwner) {
             val adapter = SepetAdapter(requireContext(), it, viewModel)
             binding.sepetAdapter = adapter
+            //binding.sepetAdapter.notifyDataSetChanged()
         }
         return binding.root
     }

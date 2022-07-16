@@ -41,7 +41,9 @@ class YemeklerAdapter(
         Picasso.get().load("http://kasimadalan.pe.hu/yemekler/resimler/${yemek.yemek_resim_adi}").into(t.imageView2)
 
         t.imageViewDecreaseButton.setOnClickListener {
-            yemek.yemek_siparis_adet --
+            if (yemek.yemek_siparis_adet > 0) {
+                yemek.yemek_siparis_adet --
+            }
             t.textViewAdet.text = yemek.yemek_siparis_adet.toString()
         }
 
@@ -53,7 +55,9 @@ class YemeklerAdapter(
         }
 
         t.buttonAdd.setOnClickListener {
-            viewModel.yemekEkleVM(yemek.yemek_adi, yemek.yemek_resim_adi, yemek.yemek_fiyat.toInt(), yemek.yemek_siparis_adet, kullanici_adi = "guts")
+            if (yemek.yemek_siparis_adet > 0) {
+                viewModel.yemekEkleVM(yemek.yemek_adi, yemek.yemek_resim_adi, yemek.yemek_fiyat.toInt(), yemek.yemek_siparis_adet, kullanici_adi = "guts")
+            }
         }
 
     }

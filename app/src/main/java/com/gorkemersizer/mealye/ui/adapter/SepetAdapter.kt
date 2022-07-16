@@ -55,6 +55,7 @@ class SepetAdapter(
             //notifyDataSetChanged()
             //viewModel.sepetListesi.value = viewModel.yrepo.sepetCagir().value
             viewModel.sepetiGetirVM("guts")
+            
         }
 
         /*

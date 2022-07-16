@@ -29,7 +29,7 @@ class MainScreen : Fragment() {
         binding.mainScreenFragment = this
 
         viewModel.yemeklerListesi.observe(viewLifecycleOwner) {
-            val adapter = YemeklerAdapter(requireContext(), it, viewModel) //, viewModel.adetSayisi
+            val adapter = YemeklerAdapter(requireContext(), it, viewModel)
             binding.yemeklerAdapter = adapter
         }
 
