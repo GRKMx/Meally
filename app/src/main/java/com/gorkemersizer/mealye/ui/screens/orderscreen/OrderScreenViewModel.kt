@@ -13,7 +13,7 @@ class OrderScreenViewModel @Inject constructor(var yrepo: YemeklerDaoRepository)
     var sepetListesi = MutableLiveData<List<SepetYemekler>>()
 
     init {
-        sepetiGetirVM("guts")
+        //sepetiGetirVM("guts")
         sepetListesi = yrepo.sepetCagir()
     }
 

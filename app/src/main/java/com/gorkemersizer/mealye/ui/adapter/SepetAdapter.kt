@@ -12,7 +12,6 @@ import com.gorkemersizer.mealye.databinding.SepetCardDesignBinding
 import com.gorkemersizer.mealye.ui.screens.orderscreen.OrderScreenViewModel
 import com.squareup.picasso.Picasso
 import java.lang.Exception
-
 class SepetAdapter(
     var mContext: Context,
     var sepetListesi: List<SepetYemekler>,
@@ -25,27 +24,14 @@ class SepetAdapter(
             this.binding = binding
         }
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {
         val layoutInflater = LayoutInflater.from(mContext)
         val binding: SepetCardDesignBinding = DataBindingUtil.inflate(layoutInflater, R.layout.sepet_card_design, parent, false)
         return CardViewHolder(binding)
     }
-
     override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
         val sepetYemek = sepetListesi[position]
         val t = holder.binding
-        /*
-        sepetYemek.yemek_adi
-        sepetListesi[position]
-        for (i in 0..sepetListesi.size){
-            if (sepetListesi[i].yemek_adi == sepetYemek.yemek_adi) {
-                sepetYemek.yemek_siparis_adet.toInt()
-                sepetListesi[i].yemek_siparis_adet.toInt()
-                sepetListesi[i].yemek_siparis_adet += sepetYemek.yemek_siparis_adet
-            }
-        }
-         */
         t.sepetNesnesi = sepetYemek
 
         Picasso.get().load("http://kasimadalan.pe.hu/yemekler/resimler/${sepetYemek.yemek_resim_adi}").into(t.imageViewSepetYemek)
@@ -55,16 +41,8 @@ class SepetAdapter(
             //notifyDataSetChanged()
             //viewModel.sepetListesi.value = viewModel.yrepo.sepetCagir().value
             viewModel.sepetiGetirVM("guts")
-            
         }
-
-        /*
-        viewModel.sepetListesi.observe(viewModel,{s ->
-            t.textViewSepetAdet.text = s
-        })
-         */
     }
-
     override fun getItemCount(): Int {
         return sepetListesi.size
     }
