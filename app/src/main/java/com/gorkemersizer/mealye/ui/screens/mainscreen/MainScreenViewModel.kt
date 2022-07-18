@@ -13,7 +13,6 @@ import javax.inject.Inject
 class MainScreenViewModel @Inject constructor(var yrepo: YemeklerDaoRepository) : ViewModel(),
     LifecycleOwner {
     var yemeklerListesi = MutableLiveData<List<Yemekler>>()
-    //*var adetSayisi = MutableLiveData<Int>()
 
     init {
         yemekleriYukle()
@@ -35,12 +34,6 @@ class MainScreenViewModel @Inject constructor(var yrepo: YemeklerDaoRepository) 
     fun adetSayisiniArtir(gelenAdet: Int): Int {
         return gelenAdet + 1
     }
-/*
-    fun adetSayisiViewHolder(){
-
-    }
-
- */
 
     override fun getLifecycle(): Lifecycle {
         return lifecycle

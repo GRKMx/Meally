@@ -49,6 +49,10 @@ class OrderScreen : Fragment() {
 
     override fun onViewStateRestored(savedInstanceState: Bundle?) {
         super.onViewStateRestored(savedInstanceState)
+    }
 
+    override fun onResume() {
+        super.onResume()
+        viewModel.sepetiGetirVM("guts")
     }
 }

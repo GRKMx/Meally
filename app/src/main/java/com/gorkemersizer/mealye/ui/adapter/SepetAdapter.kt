@@ -49,6 +49,10 @@ class SepetAdapter(
             //t.sepetSatirCard.removeView(it) //???
             //t.sepetSatirCard.isVisible = false
             Log.e("sepetListesiSayısı","sepetListSİZE in onclick: ${sepetListesi.size}")
+            if (sepetListesi.size==1){
+                Log.e("sonitem","sonitem çalıştı")
+                t.root.isVisible=false
+            }
         }
     }
     override fun getItemCount(): Int {
