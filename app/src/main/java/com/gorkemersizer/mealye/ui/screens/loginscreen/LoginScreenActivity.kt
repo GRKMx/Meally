@@ -12,6 +12,7 @@ import com.gorkemersizer.mealye.MainActivity
 import com.gorkemersizer.mealye.R
 import com.gorkemersizer.mealye.databinding.ActivityLoginScreenBinding
 import com.gorkemersizer.mealye.databinding.ActivityMainBinding
+import com.gorkemersizer.mealye.ui.screens.onboarding.OnBoardingActivity
 import kotlinx.coroutines.MainScope
 
 class LoginScreenActivity : AppCompatActivity() {
@@ -28,7 +29,7 @@ class LoginScreenActivity : AppCompatActivity() {
         val currentUser=auth.currentUser
 
         if(currentUser!=null){
-            val intent= Intent(this, MainActivity::class.java)
+            val intent= Intent(this, OnBoardingActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -43,7 +44,7 @@ class LoginScreenActivity : AppCompatActivity() {
             Toast.makeText(this,"Enter email and password!", Toast.LENGTH_LONG).show()
         }else{
             auth.signInWithEmailAndPassword(email,password).addOnSuccessListener {
-                val intent=Intent(this@LoginScreenActivity, MainActivity::class.java)
+                val intent=Intent(this@LoginScreenActivity, OnBoardingActivity::class.java)
                 startActivity(intent)
                 finish()
             }.addOnFailureListener {
@@ -62,7 +63,7 @@ class LoginScreenActivity : AppCompatActivity() {
         }else{
             auth.createUserWithEmailAndPassword(email,password).addOnSuccessListener {
                 //success
-                val intent= Intent(this@LoginScreenActivity, MainActivity::class.java)
+                val intent= Intent(this@LoginScreenActivity, OnBoardingActivity::class.java)
                 startActivity(intent)
                 finish()
             }.addOnFailureListener {

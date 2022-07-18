@@ -21,6 +21,9 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.screens.onboarding.OnBoardingActivity"
+            android:exported="false"/>
+        <activity
             android:name=".ui.screens.loginscreen.LoginScreenActivity"
             android:exported="true">
             <intent-filter>
