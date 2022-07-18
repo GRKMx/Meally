@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainScreen">
+    app:startDestination="@id/mainViewPagerFragment">
 
     <fragment
         android:id="@+id/mainScreen"
@@ -30,4 +30,9 @@
         android:name="com.gorkemersizer.mealye.ui.screens.profilescreen.ProfileScreen"
         android:label="fragment_profile_screen"
         tools:layout="@layout/fragment_profile_screen" />
+    <fragment
+        android:id="@+id/mainViewPagerFragment"
+        android:name="com.gorkemersizer.mealye.ui.screens.viewpagers.MainViewPagerFragment"
+        android:label="fragment_main_view_pager"
+        tools:layout="@layout/fragment_main_view_pager" />
 </navigation>

@@ -11,6 +11,7 @@ import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
+import androidx.viewpager2.widget.ViewPager2
 import com.gorkemersizer.mealye.R
 import com.gorkemersizer.mealye.databinding.FragmentMainScreenBinding
 import com.gorkemersizer.mealye.ui.adapter.YemeklerAdapter
@@ -32,7 +33,8 @@ class MainScreen : Fragment() {
             val adapter = YemeklerAdapter(requireContext(), it, viewModel)
             binding.yemeklerAdapter = adapter
         }
-
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.mainViewPager)
+        //viewPager?.currentItem = 1
         return binding.root
     }
 

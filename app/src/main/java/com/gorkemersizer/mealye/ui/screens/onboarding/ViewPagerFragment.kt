@@ -7,12 +7,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
-import androidx.navigation.fragment.findNavController
 import com.gorkemersizer.mealye.MainActivity
 import com.gorkemersizer.mealye.R
-import com.gorkemersizer.mealye.ui.adapter.ViewPagerAdapter
-import kotlinx.android.synthetic.main.activity_main.view.*
+import com.gorkemersizer.mealye.ui.adapter.OnBoardingViewPagerAdapter
 import kotlinx.android.synthetic.main.fragment_view_pager.view.*
 
 class ViewPagerFragment : Fragment() {
@@ -34,7 +31,7 @@ class ViewPagerFragment : Fragment() {
             VPSecondScreen(),
             VPThirdScreen()
         )
-        val adapter = ViewPagerAdapter(
+        val adapter = OnBoardingViewPagerAdapter(
             fragmentList,
             requireActivity().supportFragmentManager,
             lifecycle
