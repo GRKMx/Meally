@@ -57,6 +57,8 @@ class YemeklerAdapter(
         t.buttonAdd.setOnClickListener {
             if (yemek.yemek_siparis_adet > 0) {
                 viewModel.yemekEkleVM(yemek.yemek_adi, yemek.yemek_resim_adi, yemek.yemek_fiyat.toInt(), yemek.yemek_siparis_adet, kullanici_adi = "guts")
+                yemek.yemek_siparis_adet = 0
+                t.textViewAdet.text = yemek.yemek_siparis_adet.toString()
             }
         }
 

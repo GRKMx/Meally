@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.gorkemersizer.mealye.R
@@ -33,14 +34,21 @@ class SepetAdapter(
         val sepetYemek = sepetListesi[position]
         val t = holder.binding
         t.sepetNesnesi = sepetYemek
+        //while (sepetListesi.size==0) {
+        //    t.sepetSatirCard.removeAllViews()
+        //}
 
         Picasso.get().load("http://kasimadalan.pe.hu/yemekler/resimler/${sepetYemek.yemek_resim_adi}").into(t.imageViewSepetYemek)
         t.buttonSilSepet.setOnClickListener {
             viewModel.yemekSilVM(sepetYemek.sepet_yemek_id.toInt(), kullanici_adi = "guts")
+            //viewModel.sepetiGetirVM("guts")
             //notifyItemRemoved(position)
             //notifyDataSetChanged()
             //viewModel.sepetListesi.value = viewModel.yrepo.sepetCagir().value
-            viewModel.sepetiGetirVM("guts")
+            //viewModel.sepetiGetirVM("guts") //********************************************
+            //t.sepetSatirCard.removeView(it) //???
+            //t.sepetSatirCard.isVisible = false
+            Log.e("sepetListesiSayısı","sepetListSİZE in onclick: ${sepetListesi.size}")
         }
     }
     override fun getItemCount(): Int {

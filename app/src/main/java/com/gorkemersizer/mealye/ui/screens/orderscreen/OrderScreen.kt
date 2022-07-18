@@ -29,7 +29,7 @@ class OrderScreen : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_order_screen, container, false)
         binding.orderScreenFragment = this
-        viewModel.sepetListesi.observe(viewLifecycleOwner) {
+        viewModel.sepetListesi.observe(viewLifecycleOwner) { //viewLifecycleOwner
             val adapter = SepetAdapter(requireContext(), it, viewModel)
             binding.sepetAdapter = adapter
         }
@@ -47,4 +47,8 @@ class OrderScreen : Fragment() {
         Navigation.gecisYap(v, R.id.action_orderScreen_to_cartScreen)
     }
 
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        super.onViewStateRestored(savedInstanceState)
+
+    }
 }

@@ -35,7 +35,7 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
-                    android:id="@+id/textViewYemekIsım"
+                    android:id="@+id/textViewYemekIsim"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -54,9 +54,9 @@
                     android:text="@{yemekNesnesi.yemek_fiyat}"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/textViewYemekIsım"
-                    app:layout_constraintStart_toStartOf="@+id/textViewYemekIsım"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewYemekIsım" />
+                    app:layout_constraintEnd_toEndOf="@+id/textViewYemekIsim"
+                    app:layout_constraintStart_toStartOf="@+id/textViewYemekIsim"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewYemekIsim" />
 
                 <ImageView
                     android:id="@+id/imageViewIncreaseButton"
