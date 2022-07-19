@@ -32,7 +32,7 @@ class MainScreen : Fragment() {
             val adapter = YemeklerAdapter(requireContext(), it, viewModel)
             binding.yemeklerAdapter = adapter
         }
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.mainViewPager)
+        //val viewPager = activity?.findViewById<ViewPager2>(R.id.mainViewPager)
         //viewPager?.currentItem = 1
         return binding.root
     }

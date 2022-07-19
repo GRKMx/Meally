@@ -12,6 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.gorkemersizer.mealye.R
 import com.gorkemersizer.mealye.databinding.FragmentOrderScreenBinding
 import com.gorkemersizer.mealye.ui.adapter.SepetAdapter
