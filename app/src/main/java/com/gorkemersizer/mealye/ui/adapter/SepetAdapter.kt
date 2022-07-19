@@ -36,7 +36,7 @@ class SepetAdapter(
         t.sepetNesnesi = sepetYemek
         t.textViewSepetAraToplam.text = (sepetYemek.yemek_siparis_adet.toInt()*sepetYemek.yemek_fiyat.toInt()).toString() + " ₺"
 
-        Picasso.get().load("http://kasimadalan.pe.hu/yemekler/resimler/${sepetYemek.yemek_resim_adi}").into(t.imageViewSepetYemek)
+        //Picasso.get().load("http://kasimadalan.pe.hu/yemekler/resimler/${sepetYemek.yemek_resim_adi}").into(t.imageViewSepetYemek)
         t.buttonSilSepet.setOnClickListener {
             viewModel.yemekSilVM(sepetYemek.sepet_yemek_id.toInt(), kullanici_adi = "guts")
 
