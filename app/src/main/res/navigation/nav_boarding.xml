@@ -6,7 +6,7 @@
     app:startDestination="@id/viewPagerFragment">
     <fragment
         android:id="@+id/viewPagerFragment"
-        android:name="com.gorkemersizer.mealye.ui.screens.onboarding.ViewPagerFragment"
+        android:name="com.gorkemersizer.mealye.ui.screens.viewpagers.ViewPagerFragment"
         android:label="fragment_view_pager"
         tools:layout="@layout/fragment_view_pager" />
 </navigation>

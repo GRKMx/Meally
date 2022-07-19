@@ -1,4 +1,4 @@
-package com.gorkemersizer.mealye.ui.screens.onboarding
+package com.gorkemersizer.mealye.ui.screens.viewpagers
 
 import android.content.Context
 import android.content.Intent
@@ -10,6 +10,9 @@ import android.view.ViewGroup
 import com.gorkemersizer.mealye.MainActivity
 import com.gorkemersizer.mealye.R
 import com.gorkemersizer.mealye.ui.adapter.OnBoardingViewPagerAdapter
+import com.gorkemersizer.mealye.ui.screens.onboarding.VPFirstScreen
+import com.gorkemersizer.mealye.ui.screens.onboarding.VPSecondScreen
+import com.gorkemersizer.mealye.ui.screens.onboarding.VPThirdScreen
 import kotlinx.android.synthetic.main.fragment_view_pager.view.*
 
 class ViewPagerFragment : Fragment() {

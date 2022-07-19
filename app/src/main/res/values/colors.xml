@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="red">#FF0000</color>
+    <color name="darkgray">#63666A</color>
+    <color name="amber">#FFBF00</color>
+    <color name="canaryyellow">#FFFF8F	</color>
 </resources>

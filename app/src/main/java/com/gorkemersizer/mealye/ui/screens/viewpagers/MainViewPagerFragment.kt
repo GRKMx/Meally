@@ -11,6 +11,7 @@ import com.gorkemersizer.mealye.R
 import com.gorkemersizer.mealye.databinding.FragmentMainViewPagerBinding
 import com.gorkemersizer.mealye.ui.adapter.MainViewPagerAdapter
 import com.gorkemersizer.mealye.ui.screens.cartscreen.CartScreen
+import com.gorkemersizer.mealye.ui.screens.homescreen.HomeScreen
 import com.gorkemersizer.mealye.ui.screens.mainscreen.MainScreen
 import com.gorkemersizer.mealye.ui.screens.orderscreen.OrderScreen
 import com.gorkemersizer.mealye.ui.screens.profilescreen.ProfileScreen
@@ -29,6 +30,7 @@ class MainViewPagerFragment : Fragment() {
         val view = binding.root
 
         val fragmentList = arrayListOf<Fragment>(
+            HomeScreen(),
             MainScreen(),
             OrderScreen(),
             CartScreen(),
@@ -49,10 +51,11 @@ class MainViewPagerFragment : Fragment() {
         val tabLayout = view.tabLayout
         TabLayoutMediator(tabLayout, mainViewPager) { tab, position ->
             when (position) {
-                0 -> tab.setIcon(R.drawable.ic_main_screen)
-                1 -> tab.setIcon(R.drawable.ic_order_screen)
-                2 -> tab.setIcon(R.drawable.ic_cart_screen)
-                3 -> tab.setIcon(R.drawable.ic_profile_screen)
+                0 -> tab.setIcon(R.drawable.ic_home_screen)
+                1 -> tab.setIcon(R.drawable.ic_main_screen)
+                2 -> tab.setIcon(R.drawable.ic_order_screen)
+                3 -> tab.setIcon(R.drawable.ic_cart_screen)
+                4 -> tab.setIcon(R.drawable.ic_profile_screen)
             }
         }.attach()
         super.onViewCreated(view, savedInstanceState)

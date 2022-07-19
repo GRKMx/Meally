@@ -34,21 +34,12 @@ class SepetAdapter(
         val sepetYemek = sepetListesi[position]
         val t = holder.binding
         t.sepetNesnesi = sepetYemek
-        //while (sepetListesi.size==0) {
-        //    t.sepetSatirCard.removeAllViews()
-        //}
+        t.textViewSepetAraToplam.text = (sepetYemek.yemek_siparis_adet.toInt()*sepetYemek.yemek_fiyat.toInt()).toString() + " ₺"
 
         Picasso.get().load("http://kasimadalan.pe.hu/yemekler/resimler/${sepetYemek.yemek_resim_adi}").into(t.imageViewSepetYemek)
         t.buttonSilSepet.setOnClickListener {
             viewModel.yemekSilVM(sepetYemek.sepet_yemek_id.toInt(), kullanici_adi = "guts")
-            //viewModel.sepetiGetirVM("guts")
-            //notifyItemRemoved(position)
-            //notifyDataSetChanged()
-            //viewModel.sepetListesi.value = viewModel.yrepo.sepetCagir().value
-            //viewModel.sepetiGetirVM("guts") //********************************************
-            //t.sepetSatirCard.removeView(it) //???
-            //t.sepetSatirCard.isVisible = false
-            Log.e("sepetListesiSayısı","sepetListSİZE in onclick: ${sepetListesi.size}")
+
             if (sepetListesi.size==1){
                 Log.e("sonitem","sonitem çalıştı")
                 t.root.isVisible=false

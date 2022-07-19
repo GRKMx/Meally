@@ -27,6 +27,7 @@
                     android:id="@+id/imageViewSepetYemek"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher"
                     android:layout_marginStart="16dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -37,11 +38,12 @@
                     android:id="@+id/textViewYemekIsim"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
                     android:text="@{sepetNesnesi.yemek_adi}"
                     android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewSepetYemek"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -49,8 +51,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="14dp"
-                    android:text="@{sepetNesnesi.yemek_fiyat}"
-                    android:textSize="14sp"
+                    android:text="@{sepetNesnesi.yemek_fiyat + ` ₺`}"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="@+id/textViewYemekIsim"
                     app:layout_constraintStart_toStartOf="@+id/textViewYemekIsim"
@@ -60,22 +62,35 @@
                     android:id="@+id/textViewSepetAdet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="32dp"
-                    android:text="@{sepetNesnesi.yemek_siparis_adet}"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_marginStart="32dp"
+                    android:text="@{`x ` + sepetNesnesi.yemek_siparis_adet}"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewYemekFiyat"
+                    app:layout_constraintStart_toEndOf="@+id/textViewYemekFiyat"
+                    app:layout_constraintTop_toTopOf="@+id/textViewYemekFiyat" />
 
                 <Button
                     android:id="@+id/buttonSilSepet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="60dp"
+                    android:background="@drawable/round_button"
                     android:text="Sil"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.727" />
+
+                <TextView
+                    android:id="@+id/textViewSepetAraToplam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>

@@ -11,12 +11,14 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import androidx.viewpager2.widget.ViewPager2
 import com.gorkemersizer.mealye.R
 import com.gorkemersizer.mealye.databinding.FragmentOrderScreenBinding
 import com.gorkemersizer.mealye.ui.adapter.SepetAdapter
 import com.gorkemersizer.mealye.ui.adapter.YemeklerAdapter
 import com.gorkemersizer.mealye.util.gecisYap
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_main_view_pager.*
 import java.lang.Exception
 
 @AndroidEntryPoint
@@ -44,11 +46,8 @@ class OrderScreen : Fragment() {
     }
 
     fun odemeyeGec(v:View){
-        Navigation.gecisYap(v, R.id.action_orderScreen_to_cartScreen)
-    }
-
-    override fun onViewStateRestored(savedInstanceState: Bundle?) {
-        super.onViewStateRestored(savedInstanceState)
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.mainViewPager)
+        viewPager?.currentItem = 3
     }
 
     override fun onResume() {
