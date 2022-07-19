@@ -27,10 +27,6 @@ class MainScreenViewModel @Inject constructor(var yrepo: YemeklerDaoRepository) 
         yrepo.yemekEkle(yemek_adi, yemek_resim_adi, yemek_fiyat, yemek_siparis_adet, kullanici_adi)
     }
 
-    fun yemekSilVM(sepet_yemek_id: Int, kullanici_adi: String) {
-        yrepo.yemekSil(sepet_yemek_id, kullanici_adi)
-    }
-
     fun adetSayisiniArtir(gelenAdet: Int): Int {
         return gelenAdet + 1
     }
