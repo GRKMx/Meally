@@ -6,8 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.get
 import androidx.core.view.isVisible
+import androidx.core.view.size
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -20,6 +23,9 @@ import com.gorkemersizer.mealye.ui.adapter.YemeklerAdapter
 import com.gorkemersizer.mealye.util.gecisYap
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_main_view_pager.*
+import kotlinx.android.synthetic.main.fragment_order_screen.*
+import kotlinx.android.synthetic.main.sepet_card_design.*
+import kotlinx.android.synthetic.main.sepet_card_design.view.*
 import java.lang.Exception
 
 @AndroidEntryPoint
@@ -32,9 +38,20 @@ class OrderScreen : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_order_screen, container, false)
         binding.orderScreenFragment = this
-        viewModel.sepetListesi.observe(viewLifecycleOwner) { //viewLifecycleOwner
+        viewModel.sepetListesi.observe(viewLifecycleOwner) {
             val adapter = SepetAdapter(requireContext(), it, viewModel)
             binding.sepetAdapter = adapter
+        }
+        viewModel.araToplam.observe(viewLifecycleOwner) {
+            if (viewModel.araToplam.value==0){
+                val getirmeUcreti = "0"
+                binding.textViewGetirmeUcreti.text = getirmeUcreti
+            } else {
+                val getirmeUcreti = "8"
+                binding.textViewGetirmeUcreti.text = getirmeUcreti
+            }
+            binding.textViewYemekTutar.text = "$it ₺"
+            binding.textViewToplamFiyat.text = "${it+binding.textViewGetirmeUcreti.text.toString().toInt()}"
         }
         return binding.root
     }
@@ -54,5 +71,10 @@ class OrderScreen : Fragment() {
     override fun onResume() {
         super.onResume()
         viewModel.sepetiGetirVM("guts")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        viewModel.araToplamiSifirla()
     }
 }

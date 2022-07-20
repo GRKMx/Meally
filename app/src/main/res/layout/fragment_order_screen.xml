@@ -20,7 +20,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="240dp"
             android:adapter="@{sepetAdapter}"
             android:orientation="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -38,10 +38,81 @@
             android:layout_marginBottom="32dp"
             android:onClick="@{() -> orderScreenFragment.odemeyeGec(buttonOdemeyeGec)}"
             android:text="ödemeye geç"
-            app:layout_constraintBottom_toBottomOf="@+id/rvSepet"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewYemekTutar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="TextView"
+            android:textAlignment="viewEnd"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewGetirmeUcreti"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewGetirmeUcreti"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="TextView"
+            android:textAlignment="viewEnd"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewToplamFiyat"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewToplamFiyat"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:text="TextView"
+            android:textAlignment="viewEnd"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/buttonOdemeyeGec"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="64dp"
+            android:text="Sipariş Tutarı :"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewYemekTutar"
+            app:layout_constraintEnd_toStartOf="@+id/textViewYemekTutar"
+            app:layout_constraintTop_toTopOf="@+id/textViewYemekTutar" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="64dp"
+            android:text="Getirme Ücreti :"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewGetirmeUcreti"
+            app:layout_constraintEnd_toStartOf="@+id/textViewGetirmeUcreti"
+            app:layout_constraintTop_toTopOf="@+id/textViewGetirmeUcreti" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="64dp"
+            android:text="Sepet Toplamı :"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewToplamFiyat"
+            app:layout_constraintEnd_toStartOf="@+id/textViewToplamFiyat"
+            app:layout_constraintTop_toTopOf="@+id/textViewToplamFiyat" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

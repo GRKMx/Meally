@@ -1,9 +1,12 @@
 package com.gorkemersizer.mealye.ui.adapter
 
+import android.content.ContentProvider
+import android.content.ContentValues
 import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Filter
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.*
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +16,8 @@ import com.gorkemersizer.mealye.databinding.YemeklerCardDesignBinding
 import com.gorkemersizer.mealye.ui.screens.mainscreen.MainScreenViewModel
 import com.squareup.picasso.Picasso
 import retrofit2.http.Url
+import java.util.*
+import kotlin.collections.ArrayList
 
 class YemeklerAdapter(
     var mContext: Context,
@@ -61,10 +66,10 @@ class YemeklerAdapter(
                 t.textViewAdet.text = yemek.yemek_siparis_adet.toString()
             }
         }
-
     }
 
     override fun getItemCount(): Int {
         return yemeklerListesi.size
     }
+
 }
