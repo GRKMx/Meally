@@ -13,6 +13,7 @@ import com.gorkemersizer.mealye.ui.adapter.MainViewPagerAdapter
 import com.gorkemersizer.mealye.ui.screens.cartscreen.CartScreen
 import com.gorkemersizer.mealye.ui.screens.homescreen.HomeScreen
 import com.gorkemersizer.mealye.ui.screens.mainscreen.MainScreen
+import com.gorkemersizer.mealye.ui.screens.orderdonescreen.OrderDoneScreen
 import com.gorkemersizer.mealye.ui.screens.orderscreen.OrderScreen
 import com.gorkemersizer.mealye.ui.screens.profilescreen.ProfileScreen
 import kotlinx.android.synthetic.main.fragment_main_view_pager.*

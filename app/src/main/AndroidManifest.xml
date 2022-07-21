@@ -4,7 +4,7 @@
     package="com.gorkemersizer.mealye">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".di.MyApplication"
@@ -23,7 +23,7 @@
             android:exported="false" />
         <activity
             android:name=".ui.screens.onboarding.OnBoardingActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".ui.screens.loginscreen.LoginScreenActivity"
             android:exported="true">

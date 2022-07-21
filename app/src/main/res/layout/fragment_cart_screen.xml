@@ -30,6 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:text="Siparişi Tamamla"
+            android:onClick="@{() -> cartScreenFragment.siparisDone(buttonOdeme)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -54,43 +55,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="8dp"
-            android:text="En kısa zamanda gelsin"
-            app:layout_constraintBottom_toTopOf="@+id/checkBox3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <CheckBox
-            android:id="@+id/checkBox3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="16dp"
-            android:text="İleri bir saat seçin"
-            app:layout_constraintBottom_toTopOf="@+id/textViewSiparisAdresi"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
         <TextView
             android:id="@+id/textViewSiparisZamani"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="120dp"
             android:text="Sipariş Zamanı"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/checkBox2"
+            app:layout_constraintBottom_toTopOf="@+id/textViewSiparisAdresi"
             app:layout_constraintStart_toStartOf="parent" />
 
         <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -104,7 +82,6 @@
                 android:id="@+id/radioButton3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
                 android:text="Online Ödeme"
                 android:textSize="20sp" />
 
@@ -112,7 +89,6 @@
                 android:id="@+id/radioButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
                 android:text="Kapıda Nakit Ödeme"
                 android:textSize="20sp" />
 
@@ -120,8 +96,31 @@
                 android:id="@+id/radioButton2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
                 android:text="Kapıda Kartla Ödeme"
+                android:textSize="20sp" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSiparisZamani">
+
+            <RadioButton
+                android:id="@+id/radioButtonHemenGelsin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hemen gelsin"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonIerdeGelsin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="İleri bir saate gelsin"
                 android:textSize="20sp" />
         </RadioGroup>
 
