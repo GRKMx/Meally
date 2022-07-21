@@ -7,16 +7,19 @@ import com.gorkemersizer.mealye.data.entity.Yemekler
 import com.gorkemersizer.mealye.data.repo.YemeklerDaoRepository
 import com.gorkemersizer.mealye.ui.adapter.YemeklerAdapter
 import dagger.hilt.android.lifecycle.HiltViewModel
+import java.util.*
 import javax.inject.Inject
+import kotlin.collections.ArrayList
 
 @HiltViewModel
-class MainScreenViewModel @Inject constructor(var yrepo: YemeklerDaoRepository) : ViewModel(),
-    LifecycleOwner {
+class MainScreenViewModel @Inject constructor(var yrepo: YemeklerDaoRepository) : ViewModel(){
     var yemeklerListesi = MutableLiveData<List<Yemekler>>()
+    val yemeklerArrayListesi = ArrayList<Yemekler>()
 
     init {
         yemekleriYukle()
         yemeklerListesi = yrepo.yemekleriGetir()
+        //yemeklerArrayListesi.addAll(yemeklerListesi.value!!)
     }
 
     fun yemekleriYukle() {
@@ -31,8 +34,8 @@ class MainScreenViewModel @Inject constructor(var yrepo: YemeklerDaoRepository) 
         return gelenAdet + 1
     }
 
-    override fun getLifecycle(): Lifecycle {
-        return lifecycle
+    fun yemeklerArrayListesiOlustur() {
+
     }
 
 }
