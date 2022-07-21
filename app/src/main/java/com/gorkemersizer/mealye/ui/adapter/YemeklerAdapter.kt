@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Filter
+import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.*
 import androidx.recyclerview.widget.RecyclerView
@@ -46,8 +47,8 @@ class YemeklerAdapter(
         val yemek = yemeklerListesi[position]
         val t = holder.binding
         t.yemekNesnesi = yemek
-
         Picasso.get().load("http://kasimadalan.pe.hu/yemekler/resimler/${yemek.yemek_resim_adi}").into(t.imageView2)
+        t.progressBar.isVisible = false
 
         t.imageViewDecreaseButton.setOnClickListener {
             if (yemek.yemek_siparis_adet > 0) {

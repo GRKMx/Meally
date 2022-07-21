@@ -21,6 +21,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.gorkemersizer.mealye.R
 import com.gorkemersizer.mealye.databinding.FragmentOrderScreenBinding
+import com.gorkemersizer.mealye.databinding.SepetCardDesignBinding
 import com.gorkemersizer.mealye.ui.adapter.SepetAdapter
 import com.gorkemersizer.mealye.ui.adapter.YemeklerAdapter
 import com.gorkemersizer.mealye.util.Constants.Companion.USERNAME
@@ -46,6 +47,7 @@ class OrderScreen : Fragment() {
         viewModel.sepetListesi.observe(viewLifecycleOwner) {
             val adapter = SepetAdapter(requireContext(), it, viewModel)
             binding.sepetAdapter = adapter
+            binding.rvSepet.isVisible = true
         }
         viewModel.araToplam.observe(viewLifecycleOwner) {
             if (viewModel.araToplam.value==0){
@@ -82,5 +84,20 @@ class OrderScreen : Fragment() {
     override fun onPause() {
         super.onPause()
         viewModel.araToplamiSifirla()
+    }
+
+    fun hepsiniSil (v: View) {
+        for (i in viewModel.sepetListesi.value!!) {
+            viewModel.yemekSilVM(i.sepet_yemek_id.toInt(), USERNAME)
+             //.isVisible = false
+            binding.rvSepet.isVisible = false
+        //binding.orderScreenFragment.sepe
+        }
+        //binding.rvSepet.sepet_satir_card.isVisible = false
+        //viewModel.sepetiGetirVM(USERNAME)
+    }
+
+    override fun onStop() {
+        super.onStop()
     }
 }

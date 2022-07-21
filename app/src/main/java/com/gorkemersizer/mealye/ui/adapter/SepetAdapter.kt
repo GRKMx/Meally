@@ -30,8 +30,6 @@ class SepetAdapter(
         return CardViewHolder(binding)
     }
     override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
-        //val auth= Firebase.auth
-        //val kullaniciAdi = auth.currentUser!!.email!!.toString().lowercase().split("@").first()
         val sepetYemek = sepetListesi[position]
         val t = holder.binding
         t.sepetNesnesi = sepetYemek
