@@ -1,21 +1,17 @@
 package com.gorkemersizer.mealye.ui.adapter
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.FragmentTransaction
-import androidx.fragment.app.FragmentTransitionImpl
 import androidx.recyclerview.widget.RecyclerView
-import androidx.transition.FragmentTransitionSupport
 import com.gorkemersizer.mealye.R
 import com.gorkemersizer.mealye.data.entity.SepetYemekler
 import com.gorkemersizer.mealye.databinding.SepetCardDesignBinding
 import com.gorkemersizer.mealye.ui.screens.orderscreen.OrderScreenViewModel
-import com.squareup.picasso.Picasso
-import java.lang.Exception
+import com.gorkemersizer.mealye.util.Constants.Companion.USERNAME
+
 class SepetAdapter(
     var mContext: Context,
     var sepetListesi: List<SepetYemekler>,
@@ -34,6 +30,8 @@ class SepetAdapter(
         return CardViewHolder(binding)
     }
     override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
+        //val auth= Firebase.auth
+        //val kullaniciAdi = auth.currentUser!!.email!!.toString().lowercase().split("@").first()
         val sepetYemek = sepetListesi[position]
         val t = holder.binding
         t.sepetNesnesi = sepetYemek
@@ -46,7 +44,7 @@ class SepetAdapter(
 
         //Picasso.get().load("http://kasimadalan.pe.hu/yemekler/resimler/${sepetYemek.yemek_resim_adi}").into(t.imageViewSepetYemek)
         t.buttonSilSepet.setOnClickListener {
-            viewModel.yemekSilVM(sepetYemek.sepet_yemek_id.toInt(), kullanici_adi = "guts")
+            viewModel.yemekSilVM(sepetYemek.sepet_yemek_id.toInt(), USERNAME)
             //viewModel.araToplamiGetir(araToplam)
             viewModel.araToplamiCikar(araToplam)
             viewModel.araToplamiSifirla()

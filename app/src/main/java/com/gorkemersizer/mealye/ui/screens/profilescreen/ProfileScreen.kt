@@ -34,6 +34,8 @@ import com.google.firebase.storage.ktx.storage
 import com.gorkemersizer.mealye.R
 import com.gorkemersizer.mealye.databinding.FragmentProfileScreenBinding
 import com.gorkemersizer.mealye.ui.screens.loginscreen.LoginScreenActivity
+import com.gorkemersizer.mealye.util.Constants.Companion.USEREMAIL
+import com.gorkemersizer.mealye.util.Constants.Companion.USERNAME
 import com.squareup.picasso.Picasso
 import java.util.*
 import kotlin.collections.ArrayList
@@ -53,6 +55,8 @@ class ProfileScreen : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profile_screen, container, false)
         binding.profileScreenFragment = this
+        binding.textViewEmail.text = USEREMAIL
+        binding.textViewProfileName.text = USERNAME
         registerLauncher()
         auth= Firebase.auth
         firestore=Firebase.firestore
@@ -65,7 +69,6 @@ class ProfileScreen : Fragment() {
     fun upload(view: View){
         val uuid= UUID.randomUUID()
         val imageName="$uuid.jpg"
-
         val reference=storage.reference
         val imageReference=reference.child("images/$imageName")
 

@@ -16,10 +16,14 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.gorkemersizer.mealye.R
 import com.gorkemersizer.mealye.databinding.FragmentOrderScreenBinding
 import com.gorkemersizer.mealye.ui.adapter.SepetAdapter
 import com.gorkemersizer.mealye.ui.adapter.YemeklerAdapter
+import com.gorkemersizer.mealye.util.Constants.Companion.USERNAME
 import com.gorkemersizer.mealye.util.gecisYap
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_main_view_pager.*
@@ -32,6 +36,7 @@ import java.lang.Exception
 class OrderScreen : Fragment() {
     private lateinit var binding: FragmentOrderScreenBinding
     private lateinit var viewModel: OrderScreenViewModel
+    private lateinit var auth: FirebaseAuth
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -60,7 +65,7 @@ class OrderScreen : Fragment() {
         super.onCreate(savedInstanceState)
         val tempViewModel: OrderScreenViewModel by viewModels()
         viewModel = tempViewModel
-        viewModel.sepetiGetirVM("guts")
+        viewModel.sepetiGetirVM(USERNAME)
     }
 
     fun odemeyeGec(v:View){
@@ -70,7 +75,8 @@ class OrderScreen : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        viewModel.sepetiGetirVM("guts")
+        //val kullaniciAdi = auth.currentUser!!.email!!.toString().lowercase().split("@").first()
+        viewModel.sepetiGetirVM(USERNAME)
     }
 
     override fun onPause() {

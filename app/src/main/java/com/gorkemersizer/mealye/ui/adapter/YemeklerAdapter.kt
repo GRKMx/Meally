@@ -10,10 +10,14 @@ import android.widget.Filter
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.*
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.gorkemersizer.mealye.R
 import com.gorkemersizer.mealye.data.entity.Yemekler
 import com.gorkemersizer.mealye.databinding.YemeklerCardDesignBinding
 import com.gorkemersizer.mealye.ui.screens.mainscreen.MainScreenViewModel
+import com.gorkemersizer.mealye.util.Constants
+import com.gorkemersizer.mealye.util.Constants.Companion.USERNAME
 import com.squareup.picasso.Picasso
 import retrofit2.http.Url
 import java.util.*
@@ -33,12 +37,12 @@ class YemeklerAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {
         val layoutInflater = LayoutInflater.from(mContext)
         val binding: YemeklerCardDesignBinding = DataBindingUtil.inflate(layoutInflater, R.layout.yemekler_card_design, parent, false)
-
         return CardViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
-
+        //val auth= Firebase.auth
+        //val kullaniciAdi = auth.currentUser!!.email!!.toString().lowercase().split("@").first()
         val yemek = yemeklerListesi[position]
         val t = holder.binding
         t.yemekNesnesi = yemek
@@ -61,7 +65,7 @@ class YemeklerAdapter(
 
         t.buttonAdd.setOnClickListener {
             if (yemek.yemek_siparis_adet > 0) {
-                viewModel.yemekEkleVM(yemek.yemek_adi, yemek.yemek_resim_adi, yemek.yemek_fiyat.toInt(), yemek.yemek_siparis_adet, kullanici_adi = "guts")
+                viewModel.yemekEkleVM(yemek.yemek_adi, yemek.yemek_resim_adi, yemek.yemek_fiyat.toInt(), yemek.yemek_siparis_adet, USERNAME)
                 yemek.yemek_siparis_adet = 0
                 t.textViewAdet.text = yemek.yemek_siparis_adet.toString()
             }
