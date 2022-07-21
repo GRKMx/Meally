@@ -89,12 +89,11 @@ class OrderScreen : Fragment() {
     fun hepsiniSil (v: View) {
         for (i in viewModel.sepetListesi.value!!) {
             viewModel.yemekSilVM(i.sepet_yemek_id.toInt(), USERNAME)
-             //.isVisible = false
             binding.rvSepet.isVisible = false
-        //binding.orderScreenFragment.sepe
+            binding.textViewYemekTutar.text = "0"
+            binding.textViewGetirmeUcreti.text = "0"
+            binding.textViewToplamFiyat.text = "0"
         }
-        //binding.rvSepet.sepet_satir_card.isVisible = false
-        //viewModel.sepetiGetirVM(USERNAME)
     }
 
     override fun onStop() {

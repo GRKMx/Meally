@@ -17,6 +17,5 @@ class OnBoardingActivity : AppCompatActivity() {
         setContentView(view)
 
         // nav to main screen
-
     }
 }

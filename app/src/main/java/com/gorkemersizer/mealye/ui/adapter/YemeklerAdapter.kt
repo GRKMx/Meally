@@ -3,10 +3,12 @@ package com.gorkemersizer.mealye.ui.adapter
 import android.content.ContentProvider
 import android.content.ContentValues
 import android.content.Context
+import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Filter
+import androidx.core.graphics.alpha
 import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.*
@@ -42,13 +44,28 @@ class YemeklerAdapter(
     }
 
     override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
-        //val auth= Firebase.auth
-        //val kullaniciAdi = auth.currentUser!!.email!!.toString().lowercase().split("@").first()
+        //val colors: Array<String> = arrayOf("#90ffc0cb","#90ffff00","#907fffd4","#9000ffff","#90ff0000","#90ffa500","#908a2be2","#90ffdab9")
+
         val yemek = yemeklerListesi[position]
         val t = holder.binding
+
+        /*
+        when ((position+1)%5) {
+            //1 -> t.satirCard.setBackgroundColor(Color.parseColor(colors[1]))
+            //2 -> t.satirCard.setBackgroundColor(Color.parseColor(colors[2]))
+            //3 -> t.satirCard.setBackgroundColor(Color.parseColor(colors[3]))
+            //4 -> t.satirCard.setBackgroundColor(Color.parseColor(colors[4]))
+            //5 -> t.satirCard.setBackgroundColor(Color.parseColor(colors[5]))
+        }
+
+         */
+
         t.yemekNesnesi = yemek
         Picasso.get().load("http://kasimadalan.pe.hu/yemekler/resimler/${yemek.yemek_resim_adi}").into(t.imageView2)
         t.progressBar.isVisible = false
+
+
+        //t.satirCard.setCardBackgroundColor()
 
         t.imageViewDecreaseButton.setOnClickListener {
             if (yemek.yemek_siparis_adet > 0) {

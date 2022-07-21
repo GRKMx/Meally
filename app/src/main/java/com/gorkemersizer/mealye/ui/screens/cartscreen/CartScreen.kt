@@ -4,10 +4,13 @@ import android.app.TimePickerDialog
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
@@ -18,6 +21,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_cart_screen.*
 import kotlinx.android.synthetic.main.fragment_main_view_pager.*
 import java.util.*
+import kotlin.math.log
 
 @AndroidEntryPoint
 class CartScreen : Fragment() {
@@ -48,6 +52,10 @@ class CartScreen : Fragment() {
             }
         }
 
+        if (binding.radioButtonKart.isChecked) {
+            Log.d("radyo","radyo çalıştı")
+        }
+
         return binding.root
     }
 
@@ -58,6 +66,11 @@ class CartScreen : Fragment() {
     }
 
     fun siparisDone(v: View) {
-        Navigation.gecisYap(v, R.id.action_mainViewPagerFragment_to_orderDoneScreen)
+        if (binding.editTextAdres.text.toString() == "" || binding.editTextAdres.text.toString().isEmpty() ||  binding.editTextAdres.text.toString().isBlank() ){
+            Toast.makeText(context,"Sipariş adresi girin", Toast.LENGTH_LONG).show()
+        } else {
+            Navigation.gecisYap(v, R.id.action_mainViewPagerFragment_to_orderDoneScreen)
+        }
     }
+
 }

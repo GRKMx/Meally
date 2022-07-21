@@ -44,13 +44,13 @@
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="48dp"
             android:ems="10"
-            android:lines="2"
             android:gravity="top"
-            android:scrollbars="vertical"
             android:hint="Adres gir "
             android:inputType="textMultiLine"
+            android:lines="2"
             android:maxLines="2"
             android:nestedScrollingEnabled="false"
+            android:scrollbars="vertical"
             app:layout_constraintBottom_toTopOf="@+id/buttonOdeme"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -79,21 +79,22 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/radioButtonOnline"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="Online Ödeme"
                 android:textSize="20sp" />
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/radioButtonNakit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Kapıda Nakit Ödeme"
                 android:textSize="20sp" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/radioButtonKart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Kapıda Kartla Ödeme"
@@ -114,6 +115,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hemen gelsin"
+                android:checked="true"
                 android:textSize="20sp" />
 
             <RadioButton

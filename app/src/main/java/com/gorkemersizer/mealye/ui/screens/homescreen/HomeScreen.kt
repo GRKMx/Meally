@@ -28,9 +28,6 @@ class HomeScreen : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home_screen, container, false)
         binding.homeScreenFragment = this
 
-        binding.welcomeMessage = "Merhaba, ${USERNAME}"
-        binding.textViewWelcomeName.setTextColor(Color.BLACK)
-
         return binding.root
     }
 

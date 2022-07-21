@@ -57,65 +57,11 @@
             app:layout_constraintStart_toEndOf="@+id/imageViewEmail"
             app:layout_constraintTop_toBottomOf="@+id/textViewProfileName" />
 
-        <ImageView
-            android:id="@+id/imageViewAdres"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:src="@drawable/ic_location"
-            app:layout_constraintBottom_toBottomOf="@+id/textViewAdresBaslik"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textViewAdresBaslik" />
-
-        <TextView
-            android:id="@+id/textViewAdresBaslik"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
-            android:hint="Adresim"
-            android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/imageViewAdres"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTel" />
-
-        <EditText
-            android:id="@+id/textViewAdres"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="32dp"
-            android:hint="Adres gir"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewAdresBaslik" />
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:src="@drawable/ic_phone"
-            app:layout_constraintBottom_toBottomOf="@+id/textViewTel"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textViewTel" />
-
-        <TextView
-            android:id="@+id/textViewTel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
-            android:text=""
-            app:layout_constraintStart_toEndOf="@+id/imageView8"
-            app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
-
         <Button
             android:id="@+id/buttonCikis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="24dp"
             android:onClick="@{() -> profileScreenFragment.signOutClick(buttonCikis)}"
             android:text="Çıkış yap"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -127,11 +73,11 @@
             android:id="@+id/buttonKaydet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="156dp"
-            android:layout_marginEnd="161dp"
+            android:layout_marginStart="158dp"
+            android:layout_marginEnd="158dp"
             android:layout_marginBottom="16dp"
-            android:text="Kaydet"
             android:onClick="@{() -> profileScreenFragment.upload(buttonKaydet)}"
+            android:text="Kaydet"
             app:layout_constraintBottom_toTopOf="@+id/buttonCikis"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
