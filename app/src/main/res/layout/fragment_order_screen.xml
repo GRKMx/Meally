@@ -13,6 +13,24 @@
         android:layout_height="match_parent"
         tools:context=".ui.screens.orderscreen.OrderScreen">
 
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.7"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hamburger_arkaplan" />
+
+        <ImageView
+            android:layout_width="310dp"
+            android:layout_height="125dp"
+            android:layout_marginEnd="16dp"
+            android:alpha="0.8"
+            android:src="@drawable/siparis_tutari_arkaplan"
+            app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView4" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvSepet"
             android:layout_width="0dp"
@@ -36,6 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
+            android:background="@drawable/login_edittext_background"
             android:onClick="@{() -> orderScreenFragment.odemeyeGec(buttonOdemeyeGec)}"
             android:text="ödemeye geç"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -120,6 +139,7 @@
             android:layout_height="46dp"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="32dp"
+            android:background="@drawable/login_edittext_background"
             android:onClick="@{() -> orderScreenFragment.hepsiniSil(buttonDeleteAll)}"
             android:textAlignment="center"
             android:textSize="12sp"

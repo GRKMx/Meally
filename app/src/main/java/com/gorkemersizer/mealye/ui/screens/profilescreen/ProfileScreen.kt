@@ -68,10 +68,10 @@ class ProfileScreen : Fragment() {
     }
 
     fun upload(view: View){
-        val uuid= UUID.randomUUID()
-        val imageName="$uuid.jpg"
-        val reference=storage.reference
-        val imageReference=reference.child("images/$imageName")
+        val uuid = UUID.randomUUID()
+        val imageName ="$uuid.jpg"
+        val reference = storage.reference
+        val imageReference = reference.child("images/$imageName")
 
         if (selectedPicture!=null) {
 
@@ -151,11 +151,14 @@ class ProfileScreen : Fragment() {
             }else{
                 if(value!=null){
                     if(!value.isEmpty){
+                        val storageRef = storage.reference
+                        val imageRef = storageRef.child("images/")
+                        imageRef.delete()
+
                         val documents = value.documents
-                        //uriList.clear()
                         val uriList = ArrayList<String>()
+                        uriList.clear()
                         for(document in documents){
-                            //casting
                             val downloadUrl=document.get("imageUrl") as String
                             uriList.add(downloadUrl)
                             Log.e("profilepicture","profilepicture uri: ${downloadUrl.toUri()}")
