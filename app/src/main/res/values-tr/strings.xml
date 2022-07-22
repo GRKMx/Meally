@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Mealye</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="loginEmailText">Email</string>
+    <string name="loginPasswordText">Password</string>
+    <string name="loginButtonSignIn">Giriş Yap</string>
+    <string name="loginButtonSignUp">Kayıt Ol</string>
+
+    <string name="cartPaymentMethod">Ödeme Yöntemi</string>
+    <string name="cartOnlinePayment">Online ödeme</string>
+    <string name="cartCashDeliveryPayment">Kapıda nakit ödeme</string>
+    <string name="cartCardDeliveryPayment">Kapıda kartla ödeme</string>
+    <string name="cartDeliveryTime">Teslimat Zamanı</string>
+    <string name="cartDeliveryNow">Hemen</string>
+    <string name="cartDeliveryAhead">İleri bir zamanda</string>
+    <string name="cartDeliveryAddress">Teslimat Adresi</string>
+    <string name="cartDeliveryAddressEnter">Adres gir</string>
+    <string name="cartFinishButton">Siparişi Tamamla</string>
+
+    <string name="detailAddToCartButton">Sepete Ekle</string>
+    <string name="detailGoBackButton">Geri</string>
+
+    <string name="orderDoneSuccessful">Siparişin Başarılı !</string>
+
+    <string name="orderOrderCost">Sipariş Tutarı :</string>
+    <string name="orderDeliveryFee">Getirme Ücreti :</string>
+    <string name="orderTotal">Toplam :</string>
+    <string name="orderNextButton">İleri</string>
+
+    <string name="profileSaveButton">Kaydet</string>
+    <string name="profileLogOutButton">Çıkış Yap</string>
+
+    <string name="onboardFirst">Aç mısın ? MeAlYe ile hemen sipariş ver !</string>
+    <string name="onboardSecond">Adresinize yakın lezzetler en taze haliyle hazırlansın !</string>
+    <string name="onboardThird">Siparişiniz en kısa sürede kapınıza gelsin !</string>
+
+    <string name="cartCardDeleteButton">X</string>
+
+</resources>

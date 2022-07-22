@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginBottom="8dp"
-            android:text="Ödeme Yöntemi"
+            android:text="@string/cartPaymentMethod"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/radioGroup"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginBottom="8dp"
-            android:text="Sipariş Adresi"
+            android:text="@string/cartDeliveryAddress"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/editTextAdres"
@@ -50,8 +50,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:background="@drawable/login_edittext_background"
-            android:text="Siparişi Tamamla"
             android:onClick="@{() -> cartScreenFragment.siparisDone(buttonOdeme)}"
+            android:text="@string/cartFinishButton"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -66,7 +66,7 @@
             android:layout_marginBottom="100dp"
             android:ems="10"
             android:gravity="top"
-            android:hint="Adres gir "
+            android:hint="@string/cartDeliveryAddressEnter"
             android:inputType="textMultiLine"
             android:lines="2"
             android:maxLines="2"
@@ -82,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginBottom="120dp"
-            android:text="Sipariş Zamanı"
+            android:text="@string/cartDeliveryTime"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/textViewSiparisAdresi"
@@ -105,7 +105,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="Online Ödeme"
+                android:text="@string/cartOnlinePayment"
                 android:textSize="20sp" />
 
             <RadioButton
@@ -113,7 +113,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                android:text="Kapıda Nakit Ödeme"
+                android:text="@string/cartCashDeliveryPayment"
                 android:textSize="20sp" />
 
             <RadioButton
@@ -121,7 +121,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                android:text="Kapıda Kartla Ödeme"
+                android:text="@string/cartCardDeliveryPayment"
                 android:textSize="20sp" />
         </RadioGroup>
 
@@ -142,14 +142,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="Hemen gelsin"
+                android:text="@string/cartDeliveryNow"
                 android:textSize="20sp" />
 
             <RadioButton
                 android:id="@+id/radioButtonIerdeGelsin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="İleri bir saate gelsin"
+                android:text="@string/cartDeliveryAhead"
                 android:textSize="20sp" />
         </RadioGroup>
 

@@ -21,7 +21,7 @@
         android:layout_marginEnd="60dp"
         android:background="@drawable/login_edittext_background"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/loginEmailText"
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textColor="@color/white"
@@ -40,7 +40,7 @@
         android:layout_marginEnd="64dp"
         android:background="@drawable/login_edittext_background"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/loginPasswordText"
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textColor="@color/white"
@@ -57,7 +57,7 @@
         android:layout_marginStart="88dp"
         android:layout_marginTop="48dp"
         android:onClick="signInClicked"
-        android:text="SIGN IN"
+        android:text="@string/loginButtonSignIn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewPasswordText" />
 
@@ -68,7 +68,7 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="97dp"
         android:onClick="signUpClicked"
-        android:text="SIGN UP"
+        android:text="@string/loginButtonSignUp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewPasswordText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,7 +27,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="150dp"
-        android:text="Karnın mı acıktı ? MeAlYe ile hemen sipariş ver !"
+        android:text="@string/onboardFirst"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

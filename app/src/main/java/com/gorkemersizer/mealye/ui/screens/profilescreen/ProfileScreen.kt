@@ -49,7 +49,7 @@ class ProfileScreen : Fragment() {
     private lateinit var firestore: FirebaseFirestore
     private lateinit var db: FirebaseFirestore
     private lateinit var storage: FirebaseStorage
-    var selectedPicture: Uri?=null
+    private var selectedPicture: Uri?=null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

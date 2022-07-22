@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Mealye</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="loginEmailText">Email</string>
+    <string name="loginPasswordText">Passwort</string>
+    <string name="loginButtonSignIn">Einloggen</string>
+    <string name="loginButtonSignUp">Anmeldung</string>
+
+    <string name="cartPaymentMethod">Zahlungsmethode</string>
+    <string name="cartOnlinePayment">Onlinebezahlung</string>
+    <string name="cartCashDeliveryPayment">Barzahlung bei Lieferung</string>
+    <string name="cartCardDeliveryPayment">Karte bei Lieferung</string>
+    <string name="cartDeliveryTime">Lieferzeit</string>
+    <string name="cartDeliveryNow">Jetzt</string>
+    <string name="cartDeliveryAhead">Voraus</string>
+    <string name="cartDeliveryAddress">Lieferadresse</string>
+    <string name="cartDeliveryAddressEnter">Adresse eingeben</string>
+    <string name="cartFinishButton">Schließen Sie die Bestellung ab</string>
+
+    <string name="detailAddToCartButton">in den Warenkorb legen</string>
+    <string name="detailGoBackButton">Geh zurück</string>
+
+    <string name="orderDoneSuccessful">Ihre Bestellung ist erfolgreich !</string>
+
+    <string name="orderOrderCost">Bestellkosten :</string>
+    <string name="orderDeliveryFee">Liefergebühr :</string>
+    <string name="orderTotal">Gesamt :</string>
+    <string name="orderNextButton">Nächste</string>
+
+    <string name="profileSaveButton">Speichern</string>
+    <string name="profileLogOutButton">Ausloggen</string>
+
+    <string name="onboardFirst">Bist du hungrig ? Jetzt bei MeAlYe bestellen !</string>
+    <string name="onboardSecond">Lassen Sie die Geschmäcker in Ihrer Nähe in ihrer frischesten Form zubereiten !</string>
+    <string name="onboardThird">Bringen Sie Ihre Bestellung so schnell wie möglich zu Ihnen nach Hause !</string>
+
+    <string name="cartCardDeleteButton">X</string>
+
+</resources>

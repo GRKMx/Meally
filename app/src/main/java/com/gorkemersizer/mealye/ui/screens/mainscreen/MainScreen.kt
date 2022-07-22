@@ -1,5 +1,6 @@
 package com.gorkemersizer.mealye.ui.screens.mainscreen
 
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -45,4 +46,5 @@ class MainScreen : Fragment(){
         super.onResume()
         viewModel.yemekleriYukle()
     }
+
 }
