@@ -68,9 +68,10 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="16dp"
+            android:fontFamily="@font/oswald"
             android:text="TextView"
             android:textAlignment="viewEnd"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/textViewGetirmeUcreti"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -80,9 +81,10 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="16dp"
+            android:fontFamily="@font/oswald"
             android:text="TextView"
             android:textAlignment="viewEnd"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/textViewToplamFiyat"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -94,7 +96,7 @@
             android:layout_marginBottom="32dp"
             android:text="TextView"
             android:textAlignment="viewEnd"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/buttonOdemeyeGec"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -104,8 +106,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="64dp"
+            android:fontFamily="@font/oswald"
             android:text="@string/orderOrderCost"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="@+id/textViewYemekTutar"
             app:layout_constraintEnd_toStartOf="@+id/textViewYemekTutar"
             app:layout_constraintTop_toTopOf="@+id/textViewYemekTutar" />
@@ -115,8 +118,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="64dp"
+            android:fontFamily="@font/oswald"
             android:text="@string/orderDeliveryFee"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="@+id/textViewGetirmeUcreti"
             app:layout_constraintEnd_toStartOf="@+id/textViewGetirmeUcreti"
             app:layout_constraintTop_toTopOf="@+id/textViewGetirmeUcreti" />
@@ -126,8 +130,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="64dp"
+            android:fontFamily="@font/oswald"
             android:text="@string/orderTotal"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/textViewToplamFiyat"
             app:layout_constraintEnd_toStartOf="@+id/textViewToplamFiyat"

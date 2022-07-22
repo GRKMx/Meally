@@ -20,7 +20,6 @@ import com.google.firebase.ktx.Firebase
 import com.gorkemersizer.mealye.R
 import com.gorkemersizer.mealye.data.entity.Yemekler
 import com.gorkemersizer.mealye.databinding.YemeklerCardDesignBinding
-import com.gorkemersizer.mealye.ui.screens.homescreen.HomeScreenDirections
 import com.gorkemersizer.mealye.ui.screens.mainscreen.MainScreenViewModel
 import com.gorkemersizer.mealye.ui.screens.viewpagers.MainViewPagerFragmentDirections
 import com.gorkemersizer.mealye.util.Constants

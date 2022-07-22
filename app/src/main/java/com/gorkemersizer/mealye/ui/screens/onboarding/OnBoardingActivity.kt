@@ -15,7 +15,5 @@ class OnBoardingActivity : AppCompatActivity() {
         binding = ActivityOnBoardingBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
-        // nav to main screen
     }
 }

@@ -43,14 +43,6 @@
             app:destination="@id/detailScreen" />
     </fragment>
     <fragment
-        android:id="@+id/homeScreen"
-        android:name="com.gorkemersizer.mealye.ui.screens.homescreen.HomeScreen"
-        android:label="HomeScreen" >
-        <action
-            android:id="@+id/action_homeScreen_to_mainScreen"
-            app:destination="@id/mainScreen" />
-    </fragment>
-    <fragment
         android:id="@+id/orderDoneScreen"
         android:name="com.gorkemersizer.mealye.ui.screens.orderdonescreen.OrderDoneScreen"
         android:label="fragment_order_done_screen"

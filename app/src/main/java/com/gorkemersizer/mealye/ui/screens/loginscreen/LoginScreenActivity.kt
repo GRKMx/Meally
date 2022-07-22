@@ -62,7 +62,6 @@ class LoginScreenActivity : AppCompatActivity() {
             Toast.makeText(this,"Enter email and password", Toast.LENGTH_LONG).show()
         }else{
             auth.createUserWithEmailAndPassword(email,password).addOnSuccessListener {
-                //success
                 val intent= Intent(this@LoginScreenActivity, OnBoardingActivity::class.java)
                 startActivity(intent)
                 finish()

@@ -41,7 +41,7 @@
         android:background="@drawable/login_edittext_background"
         android:ems="10"
         android:hint="@string/loginPasswordText"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|textPassword"
         android:padding="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
