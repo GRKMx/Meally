@@ -17,17 +17,17 @@
             android:id="@+id/satir_card"
             android:layout_width="match_parent"
             android:layout_height="110dp"
+            app:cardBackgroundColor="@color/white_alpha_99"
             android:layout_margin="5dp"
-            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="20dp"
-            app:cardElevation="8dp"
-            app:cardMaxElevation="2dp"
-            app:cardPreventCornerOverlap="false"
-            app:cardUseCompatPadding="false">
+            app:cardElevation="0dp"
+            >
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
+
 
                 <ImageView
                     android:id="@+id/imageView2"
@@ -108,7 +108,7 @@
                     android:layout_height="50dp"
                     android:layout_marginStart="22dp"
                     android:layout_marginBottom="16dp"
-                    android:background="@drawable/round_textview"
+                    android:background="@drawable/sepetcard_silbutton_background"
                     app:icon="@drawable/ic_cart_screen"
                     app:iconGravity="textStart"
                     app:iconPadding="0dp"

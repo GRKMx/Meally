@@ -29,14 +29,10 @@
                 <ImageView
                     android:layout_width="68dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="4dp"
-                    android:src="@drawable/siyah_arkaplan_sepetcard"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/buttonSilSepet"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+                    android:src="@drawable/siyah_arkaplan_yemekcard"
+                    app:layout_constraintBottom_toBottomOf="@+id/buttonSilSepet"
+                    app:layout_constraintEnd_toStartOf="@+id/buttonSilSepet" />
 
                 <TextView
                     android:id="@+id/textViewYemekIsim"

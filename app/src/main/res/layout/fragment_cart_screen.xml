@@ -12,6 +12,26 @@
         android:layout_height="match_parent"
         tools:context=".ui.screens.cartscreen.CartScreen">
 
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.7"
+            android:scaleType="centerCrop"
+            android:src="@drawable/makaron_arkaplan" />
+
+        <TextView
+            android:id="@+id/textViewSiparisZamani3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="Ödeme Yöntemi"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+            app:layout_constraintStart_toStartOf="parent" />
+
         <TextView
             android:id="@+id/textViewSiparisAdresi"
             android:layout_width="wrap_content"
@@ -29,6 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
+            android:background="@drawable/login_edittext_background"
             android:text="Siparişi Tamamla"
             android:onClick="@{() -> cartScreenFragment.siparisDone(buttonOdeme)}"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -42,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginBottom="48dp"
+            android:layout_marginBottom="100dp"
             android:ems="10"
             android:gravity="top"
             android:hint="Adres gir "
@@ -51,7 +72,7 @@
             android:maxLines="2"
             android:nestedScrollingEnabled="false"
             android:scrollbars="vertical"
-            app:layout_constraintBottom_toTopOf="@+id/buttonOdeme"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -62,7 +83,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginBottom="120dp"
             android:text="Sipariş Zamanı"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/textViewSiparisAdresi"
             app:layout_constraintStart_toStartOf="parent" />
@@ -73,7 +94,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/white_alpha_7"
             app:layout_constraintBottom_toTopOf="@+id/textViewSiparisZamani"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -90,6 +112,7 @@
                 android:id="@+id/radioButtonNakit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:text="Kapıda Nakit Ödeme"
                 android:textSize="20sp" />
 
@@ -97,16 +120,20 @@
                 android:id="@+id/radioButtonKart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:text="Kapıda Kartla Ödeme"
                 android:textSize="20sp" />
         </RadioGroup>
 
         <RadioGroup
             android:id="@+id/radioGroup2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:background="@color/white_alpha_7"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewSiparisZamani">
 
@@ -114,8 +141,8 @@
                 android:id="@+id/radioButtonHemenGelsin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hemen gelsin"
                 android:checked="true"
+                android:text="Hemen gelsin"
                 android:textSize="20sp" />
 
             <RadioButton
