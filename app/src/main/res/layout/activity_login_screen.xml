@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:alpha="0.7"
         android:scaleType="centerCrop"
-        android:src="@drawable/dondurma_arkaplan"/>
+        android:src="@drawable/dondurma_arkaplan_resized"/>
 
     <EditText
         android:id="@+id/textViewEmailText"

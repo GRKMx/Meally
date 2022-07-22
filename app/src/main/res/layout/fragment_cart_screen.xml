@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:alpha="0.7"
             android:scaleType="centerCrop"
-            android:src="@drawable/makaron_arkaplan" />
+            android:src="@drawable/makaron_arkaplan_resized" />
 
         <TextView
             android:id="@+id/textViewSiparisZamani3"

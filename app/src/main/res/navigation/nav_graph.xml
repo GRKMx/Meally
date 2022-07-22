@@ -38,6 +38,9 @@
         <action
             android:id="@+id/action_mainViewPagerFragment_to_orderDoneScreen"
             app:destination="@id/orderDoneScreen" />
+        <action
+            android:id="@+id/detayEkraninaGecis"
+            app:destination="@id/detailScreen" />
     </fragment>
     <fragment
         android:id="@+id/homeScreen"
@@ -55,5 +58,17 @@
         <action
             android:id="@+id/action_orderDoneScreen_to_mainViewPagerFragment"
             app:destination="@id/mainViewPagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailScreen"
+        android:name="com.gorkemersizer.mealye.ui.screens.detailscreen.DetailScreen"
+        android:label="fragment_detail_screen"
+        tools:layout="@layout/fragment_detail_screen" >
+        <action
+            android:id="@+id/anaEkranaGecis"
+            app:destination="@id/mainViewPagerFragment" />
+        <argument
+            android:name="yemek"
+            app:argType="com.gorkemersizer.mealye.data.entity.Yemekler" />
     </fragment>
 </navigation>

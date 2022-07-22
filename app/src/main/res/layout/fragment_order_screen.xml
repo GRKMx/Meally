@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:alpha="0.7"
             android:scaleType="centerCrop"
-            android:src="@drawable/hamburger_arkaplan" />
+            android:src="@drawable/hamburger_arkaplan_resized" />
 
         <ImageView
             android:layout_width="310dp"

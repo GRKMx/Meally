@@ -18,7 +18,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/pizza_arkaplan"
+            android:src="@drawable/pizza_arkaplan_resized"
             android:scaleType="centerCrop"
             android:alpha="0.8"/>
 

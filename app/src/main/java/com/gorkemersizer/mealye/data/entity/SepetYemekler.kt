@@ -1,6 +1,7 @@
 package com.gorkemersizer.mealye.data.entity
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class SepetYemekler(
     @SerializedName("sepet_yemek_id") val sepet_yemek_id: String,
@@ -9,4 +10,4 @@ data class SepetYemekler(
     @SerializedName("yemek_resim_adi") val yemek_resim_adi: String,
     @SerializedName("kullanici_adi") val kullanici_adi: String,
     @SerializedName("yemek_siparis_adet") var yemek_siparis_adet: String
-)
+) : Serializable

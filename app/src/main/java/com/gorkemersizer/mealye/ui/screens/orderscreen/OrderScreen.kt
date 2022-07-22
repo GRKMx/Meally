@@ -77,7 +77,6 @@ class OrderScreen : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        //val kullaniciAdi = auth.currentUser!!.email!!.toString().lowercase().split("@").first()
         viewModel.sepetiGetirVM(USERNAME)
     }
 
@@ -96,7 +95,4 @@ class OrderScreen : Fragment() {
         }
     }
 
-    override fun onStop() {
-        super.onStop()
-    }
 }

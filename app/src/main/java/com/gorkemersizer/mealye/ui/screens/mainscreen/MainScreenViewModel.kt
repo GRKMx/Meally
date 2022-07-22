@@ -14,12 +14,10 @@ import kotlin.collections.ArrayList
 @HiltViewModel
 class MainScreenViewModel @Inject constructor(var yrepo: YemeklerDaoRepository) : ViewModel(){
     var yemeklerListesi = MutableLiveData<List<Yemekler>>()
-    val yemeklerArrayListesi = ArrayList<Yemekler>()
 
     init {
         yemekleriYukle()
         yemeklerListesi = yrepo.yemekleriGetir()
-        //yemeklerArrayListesi.addAll(yemeklerListesi.value!!)
     }
 
     fun yemekleriYukle() {
@@ -32,10 +30,6 @@ class MainScreenViewModel @Inject constructor(var yrepo: YemeklerDaoRepository) 
 
     fun adetSayisiniArtir(gelenAdet: Int): Int {
         return gelenAdet + 1
-    }
-
-    fun yemeklerArrayListesiOlustur() {
-
     }
 
 }
