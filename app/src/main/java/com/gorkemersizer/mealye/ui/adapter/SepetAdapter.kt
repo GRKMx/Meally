@@ -36,14 +36,11 @@ class SepetAdapter(
 
         val araToplam = sepetYemek.yemek_siparis_adet.toInt()*sepetYemek.yemek_fiyat.toInt()
         t.textViewSepetAraToplam.text = "$araToplam ₺"
-
-        //viewModel.araToplamiGetir()
         viewModel.araToplamiArtir(araToplam)
 
         //Picasso.get().load("http://kasimadalan.pe.hu/yemekler/resimler/${sepetYemek.yemek_resim_adi}").into(t.imageViewSepetYemek)
         t.buttonSilSepet.setOnClickListener {
             viewModel.yemekSilVM(sepetYemek.sepet_yemek_id.toInt(), USERNAME)
-            //viewModel.araToplamiGetir(araToplam)
             viewModel.araToplamiCikar(araToplam)
             viewModel.araToplamiSifirla()
             viewModel.araToplamiGetir()

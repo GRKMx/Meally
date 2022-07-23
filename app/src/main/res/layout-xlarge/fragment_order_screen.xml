@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="orderScreenFragment" type="com.gorkemersizer.mealye.ui.screens.orderscreen.OrderScreen" />
+        <variable name="sepetAdapter" type="com.gorkemersizer.mealye.ui.adapter.SepetAdapter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.screens.orderscreen.OrderScreen">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.7"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hamburger_arkaplan_resized" />
+
+        <ImageView
+            android:layout_width="500dp"
+            android:layout_height="400dp"
+            android:layout_marginEnd="16dp"
+            android:alpha="0.8"
+            android:src="@drawable/siparis_tutari_arkaplan"
+            app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSepet"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="240dp"
+            android:adapter="@{sepetAdapter}"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/buttonOdemeyeGec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="64dp"
+            android:background="@drawable/login_edittext_background"
+            android:onClick="@{() -> orderScreenFragment.odemeyeGec(buttonOdemeyeGec)}"
+            android:text="@string/orderNextButton"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewYemekTutar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/oswald"
+            android:text="TextView"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/orderScreenTextColor"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewGetirmeUcreti"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewGetirmeUcreti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/oswald"
+            android:text="TextView"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/orderScreenTextColor"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewToplamFiyat"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewToplamFiyat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="100dp"
+            android:text="TextView"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/orderScreenTextColor"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/buttonOdemeyeGec"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="64dp"
+            android:fontFamily="@font/oswald"
+            android:padding="5dp"
+            android:text="@string/orderOrderCost"
+            android:textColor="@color/orderScreenTextColor"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewYemekTutar"
+            app:layout_constraintEnd_toStartOf="@+id/textViewYemekTutar"
+            app:layout_constraintTop_toTopOf="@+id/textViewYemekTutar" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="64dp"
+            android:fontFamily="@font/oswald"
+            android:padding="5dp"
+            android:text="@string/orderDeliveryFee"
+            android:textColor="@color/orderScreenTextColor"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewGetirmeUcreti"
+            app:layout_constraintEnd_toStartOf="@+id/textViewGetirmeUcreti"
+            app:layout_constraintTop_toTopOf="@+id/textViewGetirmeUcreti" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="64dp"
+            android:fontFamily="@font/oswald"
+            android:padding="5dp"
+            android:text="@string/orderTotal"
+            android:textColor="@color/orderScreenTextColor"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewToplamFiyat"
+            app:layout_constraintEnd_toStartOf="@+id/textViewToplamFiyat"
+            app:layout_constraintTop_toTopOf="@+id/textViewToplamFiyat" />
+
+        <Button
+            android:id="@+id/buttonDeleteAll"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginBottom="64dp"
+            android:background="@drawable/login_edittext_background"
+            android:onClick="@{() -> orderScreenFragment.hepsiniSil(buttonDeleteAll)}"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:icon="@drawable/ic_delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

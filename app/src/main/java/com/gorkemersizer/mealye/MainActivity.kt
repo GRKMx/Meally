@@ -23,9 +23,6 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.Theme_MeAlYe)
         setContentView(binding.root)
 
-        //val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
-        //NavigationUI.setupWithNavController(binding.bottomNavigationView, navHostFragment.navController)
-
     }
 
 }

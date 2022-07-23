@@ -15,7 +15,7 @@
     <EditText
         android:id="@+id/textViewEmailText"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="62dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="250dp"
         android:layout_marginEnd="60dp"
@@ -26,6 +26,7 @@
         android:padding="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +35,7 @@
     <EditText
         android:id="@+id/textViewPasswordText"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="62dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="64dp"
@@ -45,6 +46,7 @@
         android:padding="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,8 +59,10 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="48dp"
         android:onClick="signInClicked"
+        android:padding="8dp"
         android:text="@string/loginButtonSignIn"
         android:textColor="@color/white"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewPasswordText" />
 
@@ -69,8 +73,10 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="80dp"
         android:onClick="signUpClicked"
+        android:padding="8dp"
         android:text="@string/loginButtonSignUp"
         android:textColor="@color/white"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewPasswordText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

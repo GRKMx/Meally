@@ -23,7 +23,6 @@ class ViewPagerFragment : Fragment() {
     ): View? {
 
         if (onBoardingFinished()){
-            // nav to mainscreen
             val intent= Intent(activity, MainActivity::class.java)
             startActivity(intent)
         }

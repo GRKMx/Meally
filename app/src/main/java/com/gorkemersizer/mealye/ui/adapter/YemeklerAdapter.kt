@@ -77,7 +77,6 @@ class YemeklerAdapter(
         t.imageViewYemekResim.setOnClickListener {
             val gecis = MainViewPagerFragmentDirections.detayEkraninaGecis(yemek)
             Navigation.findNavController(it).navigate(gecis)
-            Log.d("gecis","gecis 3")
         }
     }
     override fun getItemCount(): Int {

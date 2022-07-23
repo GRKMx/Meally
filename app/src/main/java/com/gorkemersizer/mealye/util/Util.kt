@@ -12,7 +12,3 @@ fun Navigation.gecisYap(v:View, id:Int) {
 fun Navigation.gecisYap(v:View,id: NavDirections){
     findNavController(v).navigate(id)
 }
-/*
-val View.lifecycleOwner get() = ViewTreeLifecycleOwner.get(this)
-
- */

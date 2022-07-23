@@ -1,7 +1,6 @@
 package com.gorkemersizer.mealye.ui.screens.profilescreen
 
 import android.Manifest
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -20,7 +19,6 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
-import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.Timestamp
@@ -56,14 +54,14 @@ class ProfileScreen : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profile_screen, container, false)
         binding.profileScreenFragment = this
-        binding.textViewEmail.text = USEREMAIL
-        binding.textViewProfileName.text = USERNAME
-        registerLauncher()
         auth= Firebase.auth
         firestore=Firebase.firestore
         storage=Firebase.storage
         db=Firebase.firestore
         getData()
+        binding.textViewEmail.text = USEREMAIL
+        binding.textViewProfileName.text = USERNAME
+        intentToGallery()
 
         /*
         binding.switchNightLight.setOnCheckedChangeListener { compoundButton, b ->
@@ -133,7 +131,7 @@ class ProfileScreen : Fragment() {
         }
     }
 
-    private fun registerLauncher(){
+    private fun intentToGallery(){
         activityResultLauncher=registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
             if(result.resultCode== AppCompatActivity.RESULT_OK){
                 val intentFromResult=result.data

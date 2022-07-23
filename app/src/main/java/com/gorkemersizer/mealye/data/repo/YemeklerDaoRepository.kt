@@ -23,23 +23,14 @@ class YemeklerDaoRepository(var ydao: YemeklerDao) {
 
     fun yemekEkle(yemek_ad: String, yemek_resim_adi: String, yemek_fiyat: Int, yemek_siparis_adet: Int, kullanici_adi: String) {
         ydao.sepeteYemekEkle(yemek_ad, yemek_resim_adi, yemek_fiyat, yemek_siparis_adet, kullanici_adi).enqueue(object : Callback<CRUDCevap>{
-            override fun onResponse(call: Call<CRUDCevap>, response: Response<CRUDCevap>) {
-                val basari = response.body()!!.success
-                val mesaj = response.body()!!.message
-                Log.e("Yemek kayıt","$basari - $mesaj")
-            }
+            override fun onResponse(call: Call<CRUDCevap>, response: Response<CRUDCevap>) {}
             override fun onFailure(call: Call<CRUDCevap>, t: Throwable) {}
         })
     }
 
     fun yemekSil(sepet_yemek_id: Int, kullanici_adi: String) {
         ydao.sepettenYemekSil(sepet_yemek_id, kullanici_adi).enqueue(object : Callback<CRUDCevap> {
-            override fun onResponse(call: Call<CRUDCevap>, response: Response<CRUDCevap>) {
-                val basari = response.body()!!.success
-                val mesaj = response.body()!!.message
-                Log.e("Yemek sil","$basari - $mesaj")
-                sepetiGetir(kullanici_adi)
-            }
+            override fun onResponse(call: Call<CRUDCevap>, response: Response<CRUDCevap>) { sepetiGetir(kullanici_adi) }
             override fun onFailure(call: Call<CRUDCevap>, t: Throwable) {}
         })
     }
@@ -51,9 +42,7 @@ class YemeklerDaoRepository(var ydao: YemeklerDao) {
     fun sepetiGetir(kullanici_adi: String) {
         ydao.sepettekiYemekleriGetir(kullanici_adi).enqueue(object : Callback<SepetYemeklerCevap> {
             override fun onResponse(call: Call<SepetYemeklerCevap>, response: Response<SepetYemeklerCevap>) {
-                val basari = response.body()!!.success
                 val sepetListe = response.body()!!.sepet_yemekler
-                Log.e("SepetGetir","$basari")
                 sepetListesi.value = sepetListe
             }
             override fun onFailure(call: Call<SepetYemeklerCevap>, t: Throwable) {}

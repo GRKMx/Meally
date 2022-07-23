@@ -22,7 +22,6 @@ class VPThirdScreen : Fragment() {
         val view = inflater.inflate(R.layout.fragment_v_p_third_screen, container, false)
 
         view.setOnClickListener {
-            // nav to mainscreen
             onBoardFinished()
             val intent= Intent(activity, MainActivity::class.java)
             startActivity(intent)

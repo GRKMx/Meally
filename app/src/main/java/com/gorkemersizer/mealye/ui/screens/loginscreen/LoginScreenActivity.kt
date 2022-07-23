@@ -20,9 +20,9 @@ class LoginScreenActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.Theme_MeAlYe)
         binding = ActivityLoginScreenBinding.inflate(layoutInflater)
         val view = binding.root
-        setTheme(R.style.Theme_MeAlYe)
         setContentView(view)
 
         auth= Firebase.auth

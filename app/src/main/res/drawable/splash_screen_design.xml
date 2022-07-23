@@ -3,6 +3,6 @@
 
     <item android:drawable="@color/white"/>
 
-    <item android:drawable="@drawable/logo_1" android:gravity="center"/>
+    <item android:drawable="@drawable/meally_splash_image" android:gravity="center"/>
 
 </layer-list>
