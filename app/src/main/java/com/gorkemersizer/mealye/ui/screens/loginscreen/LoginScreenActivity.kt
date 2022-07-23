@@ -22,6 +22,7 @@ class LoginScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginScreenBinding.inflate(layoutInflater)
         val view = binding.root
+        setTheme(R.style.Theme_MeAlYe)
         setContentView(view)
 
         auth= Firebase.auth
@@ -68,8 +69,10 @@ class LoginScreenActivity : AppCompatActivity() {
             }.addOnFailureListener {
                 Toast.makeText(this@LoginScreenActivity,it.localizedMessage, Toast.LENGTH_LONG).show()
             }
-
         }
+    }
 
+    override fun onBackPressed() {
+        // do nothing
     }
 }

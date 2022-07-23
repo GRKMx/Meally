@@ -64,6 +64,17 @@ class ProfileScreen : Fragment() {
         storage=Firebase.storage
         db=Firebase.firestore
         getData()
+
+        /*
+        binding.switchNightLight.setOnCheckedChangeListener { compoundButton, b ->
+            if (b) {
+                (activity as AppCompatActivity).delegate.localNightMode = AppCompatDelegate.MODE_NIGHT_NO
+            } else {
+                (activity as AppCompatActivity).delegate.localNightMode = AppCompatDelegate.MODE_NIGHT_YES
+            }
+        }
+         */
+
         return binding.root
     }
 

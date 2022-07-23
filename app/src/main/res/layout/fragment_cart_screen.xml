@@ -75,6 +75,7 @@
             android:maxLines="2"
             android:nestedScrollingEnabled="false"
             android:scrollbars="vertical"
+            android:textColor="@color/cartScreenTextColor"
             app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -111,6 +112,7 @@
                 android:checked="true"
                 android:fontFamily="@font/open_sans"
                 android:text="@string/cartOnlinePayment"
+                android:textColor="@color/cartScreenTextColor"
                 android:textSize="20sp" />
 
             <RadioButton
@@ -120,6 +122,7 @@
 
                 android:fontFamily="@font/open_sans"
                 android:text="@string/cartCashDeliveryPayment"
+                android:textColor="@color/cartScreenTextColor"
                 android:textSize="20sp" />
 
             <RadioButton
@@ -129,6 +132,7 @@
 
                 android:fontFamily="@font/open_sans"
                 android:text="@string/cartCardDeliveryPayment"
+                android:textColor="@color/cartScreenTextColor"
                 android:textSize="20sp" />
         </RadioGroup>
 
@@ -151,6 +155,7 @@
                 android:checked="true"
                 android:fontFamily="@font/open_sans"
                 android:text="@string/cartDeliveryNow"
+                android:textColor="@color/cartScreenTextColor"
                 android:textSize="20sp" />
 
             <RadioButton
@@ -159,6 +164,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/open_sans"
                 android:text="@string/cartDeliveryAhead"
+                android:textColor="@color/cartScreenTextColor"
                 android:textSize="20sp" />
         </RadioGroup>
 

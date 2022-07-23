@@ -56,8 +56,8 @@ class OrderScreen : Fragment() {
                 val getirmeUcreti = "8"
                 binding.textViewGetirmeUcreti.text = getirmeUcreti
             }
-            binding.textViewYemekTutar.text = "$it ₺"
-            binding.textViewToplamFiyat.text = "${it+binding.textViewGetirmeUcreti.text.toString().toInt()}"
+            binding.textViewYemekTutar.text = "$it"
+            binding.textViewToplamFiyat.text = "${it+binding.textViewGetirmeUcreti.text.toString().toInt()} ₺"
         }
         return binding.root
     }

@@ -23,14 +23,14 @@
     <color name="light_gray">#D3D3D3</color>
     <color name="gray_tema">#484848</color>
     <color name="verydarkgray">#212121</color>
-    
-    <color name="orderScreenTextColor">#63666A</color>
-    <color name="orderScreenCardTextColor">#63666A</color>
+
+    <color name="orderScreenTextColor">#FF000000</color>
+    <color name="orderScreenCardTextColor">#FF000000</color>
 
     <color name="cartScreenTextColor">#FF000000</color>
 
     <color name="profileTextColor">#FF000000</color>
 
-    <color name="profileButtonColor">#FFFFFFFF</color>
+    <color name="profileButtonColor">#D3D3D3</color>
 
 </resources>

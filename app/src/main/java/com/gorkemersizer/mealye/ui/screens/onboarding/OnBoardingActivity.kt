@@ -14,6 +14,7 @@ class OnBoardingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityOnBoardingBinding.inflate(layoutInflater)
         val view = binding.root
+        setTheme(R.style.Theme_MeAlYe)
         setContentView(view)
     }
 }
