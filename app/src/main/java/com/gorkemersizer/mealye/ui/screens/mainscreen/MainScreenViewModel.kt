@@ -20,6 +20,10 @@ class MainScreenViewModel @Inject constructor(var yrepo: YemeklerDaoRepository) 
         yemeklerListesi = yrepo.yemekleriGetir()
     }
 
+    fun ara(aramaKelimesi: String) {
+        yrepo.yemekAra(aramaKelimesi)
+        }
+
     fun yemekleriYukle() {
         yrepo.tumYemekleriAl()
     }

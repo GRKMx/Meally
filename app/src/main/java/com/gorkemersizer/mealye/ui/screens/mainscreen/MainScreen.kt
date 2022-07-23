@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.SearchView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import com.gorkemersizer.mealye.R
@@ -18,7 +19,7 @@ import kotlinx.android.synthetic.main.fragment_main_screen.*
 import kotlinx.android.synthetic.main.fragment_main_screen.view.*
 
 @AndroidEntryPoint
-class MainScreen : Fragment() {
+class MainScreen : Fragment(), SearchView.OnQueryTextListener {
     private lateinit var binding: FragmentMainScreenBinding
     private lateinit var viewModel: MainScreenViewModel
     override fun onCreateView(
@@ -27,18 +28,20 @@ class MainScreen : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main_screen, container, false)
         binding.mainScreenFragment = this
+        binding.mainScreenToolbarTitle = "Meally"
+        (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
 
         viewModel.yemeklerListesi.observe(viewLifecycleOwner) {
             val adapter = YemeklerAdapter(requireContext(), it, viewModel)
             binding.yemeklerAdapter = adapter
         }
-        //val viewPager = activity?.findViewById<ViewPager2>(R.id.mainViewPager)
-        //viewPager?.currentItem = 1
+
         return binding.root
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
         val tempViewModel: MainScreenViewModel by viewModels()
         viewModel = tempViewModel
     }
@@ -46,6 +49,26 @@ class MainScreen : Fragment() {
     override fun onResume() {
         super.onResume()
         viewModel.yemekleriYukle()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.toolbar_menu,menu)
+
+        val item = menu.findItem(R.id.action_search)
+        val searchView = item.actionView as SearchView
+        searchView.setOnQueryTextListener(this)
+
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onQueryTextSubmit(p0: String): Boolean {
+        viewModel.ara(p0)
+        return true
+    }
+
+    override fun onQueryTextChange(p0: String): Boolean {
+        viewModel.ara(p0)
+        return true
     }
 
 }

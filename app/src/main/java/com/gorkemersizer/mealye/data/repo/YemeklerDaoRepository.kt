@@ -70,4 +70,17 @@ class YemeklerDaoRepository(var ydao: YemeklerDao) {
         })
     }
 
+    fun yemekAra(aramaKelimesi:String) {
+        ydao.tumYemekler().enqueue(object:Callback<YemeklerCevap>{
+            override fun onResponse(call: Call<YemeklerCevap>, response: Response<YemeklerCevap>) {
+                val liste = response.body()!!.yemekler
+                val sonuc = liste.filter {
+                    it.yemek_adi.contains(aramaKelimesi, true)
+                }
+                yemeklerListesi.value = sonuc
+            }
+            override fun onFailure(call: Call<YemeklerCevap>, t: Throwable) {}
+        })
+    }
+
 }

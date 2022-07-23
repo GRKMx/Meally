@@ -37,4 +37,6 @@
 
     <string name="cartCardDeleteButton">X</string>
 
+    <string name="menuSearch">Suche</string>
+
 </resources>
