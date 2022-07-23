@@ -16,11 +16,12 @@
         tools:context=".ui.screens.mainscreen.MainScreen">
 
         <ImageView
+            android:id="@+id/imageView5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/pizza_arkaplan_resized"
+            android:alpha="0.8"
             android:scaleType="centerCrop"
-            android:alpha="0.8"/>
+            android:src="@drawable/pizza_arkaplan_resized" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv"
@@ -35,7 +36,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

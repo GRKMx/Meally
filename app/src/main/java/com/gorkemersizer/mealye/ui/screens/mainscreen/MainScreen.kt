@@ -14,10 +14,11 @@ import com.gorkemersizer.mealye.databinding.FragmentMainScreenBinding
 import com.gorkemersizer.mealye.ui.adapter.YemeklerAdapter
 import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_main_screen.*
 import kotlinx.android.synthetic.main.fragment_main_screen.view.*
 
 @AndroidEntryPoint
-class MainScreen : Fragment(){
+class MainScreen : Fragment() {
     private lateinit var binding: FragmentMainScreenBinding
     private lateinit var viewModel: MainScreenViewModel
     override fun onCreateView(
