@@ -44,18 +44,13 @@ class CartScreen : Fragment() {
                 timePicker = TimePickerDialog(this.context, TimePickerDialog.OnTimeSetListener{ timePicker, i, i1 ->
                     radioButtonIerdeGelsin.text = "$i : $i1"
                 }, saat, dakika, true)
-                timePicker.setTitle("Saat Seçiniz")
-                timePicker.setButton(DialogInterface.BUTTON_POSITIVE,"Ayarla",timePicker)
-                timePicker.setButton(DialogInterface.BUTTON_NEGATIVE,"İptal",timePicker)
+                timePicker.setTitle("Choose Time")
+                timePicker.setButton(DialogInterface.BUTTON_POSITIVE,"Set",timePicker)
+                timePicker.setButton(DialogInterface.BUTTON_NEGATIVE,"Cancel",timePicker)
 
                 timePicker.show()
             }
         }
-
-        if (binding.radioButtonKart.isChecked) {
-            Log.d("radyo","radyo çalıştı")
-        }
-
         return binding.root
     }
 
@@ -67,7 +62,7 @@ class CartScreen : Fragment() {
 
     fun siparisDone(v: View) {
         if (binding.editTextAdres.text.toString() == "" || binding.editTextAdres.text.toString().isEmpty() ||  binding.editTextAdres.text.toString().isBlank() ){
-            Toast.makeText(context,"Sipariş adresi girin", Toast.LENGTH_LONG).show()
+            Toast.makeText(context,"Enter delivery address", Toast.LENGTH_LONG).show()
         } else {
             Navigation.gecisYap(v, R.id.action_mainViewPagerFragment_to_orderDoneScreen)
         }

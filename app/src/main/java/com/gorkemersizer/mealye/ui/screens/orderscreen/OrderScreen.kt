@@ -37,7 +37,6 @@ import java.lang.Exception
 class OrderScreen : Fragment() {
     private lateinit var binding: FragmentOrderScreenBinding
     private lateinit var viewModel: OrderScreenViewModel
-    private lateinit var auth: FirebaseAuth
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

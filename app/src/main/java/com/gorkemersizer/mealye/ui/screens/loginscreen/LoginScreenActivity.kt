@@ -59,7 +59,7 @@ class LoginScreenActivity : AppCompatActivity() {
         val password=binding.textViewPasswordText.text.toString()
 
         if(email.equals("") || password.equals("")){
-            Toast.makeText(this,"Enter email and password", Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"Enter email and password!", Toast.LENGTH_LONG).show()
         }else{
             auth.createUserWithEmailAndPassword(email,password).addOnSuccessListener {
                 val intent= Intent(this@LoginScreenActivity, OnBoardingActivity::class.java)
