@@ -71,7 +71,7 @@ class OrderScreen : Fragment() {
 
     fun odemeyeGec(v:View){
         val viewPager = activity?.findViewById<ViewPager2>(R.id.mainViewPager)
-        viewPager?.currentItem = 3
+        viewPager?.currentItem = 2
     }
 
     override fun onResume() {

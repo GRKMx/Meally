@@ -119,7 +119,7 @@ class ProfileScreen : Fragment() {
 
         if(ContextCompat.checkSelfPermission(this.requireContext(),Manifest.permission.READ_EXTERNAL_STORAGE)!=PackageManager.PERMISSION_GRANTED){
             if(ActivityCompat.shouldShowRequestPermissionRationale(this.requireActivity(),Manifest.permission.READ_EXTERNAL_STORAGE)){
-                Snackbar.make(view,"Galeri İçin İzin Gerekli !",Snackbar.LENGTH_INDEFINITE).setAction("İzin Ver"){
+                Snackbar.make(view,"Permission Need for Gallery !",Snackbar.LENGTH_INDEFINITE).setAction("Give Permission"){
                     permissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
                 }.show()
             }else{
@@ -170,7 +170,6 @@ class ProfileScreen : Fragment() {
                         for(document in documents){
                             val downloadUrl=document.get("imageUrl") as String
                             uriList.add(downloadUrl)
-                            Log.e("profilepicture","profilepicture uri: ${downloadUrl.toUri()}")
                         }
                         if (uriList.isNotEmpty()){
                             Picasso.get().load("${uriList.last().toUri()}").into(binding.imageView)

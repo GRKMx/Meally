@@ -29,7 +29,7 @@
             android:fontFamily="@font/open_sans"
             android:padding="10dp"
             android:text="@string/cartPaymentMethod"
-            android:textSize="48dp"
+            android:textSize="22dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/radioGroup"
             app:layout_constraintStart_toStartOf="parent" />
@@ -42,7 +42,7 @@
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/open_sans"
             android:text="@string/cartDeliveryAddress"
-            android:textSize="40dp"
+            android:textSize="22dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/editTextAdres"
             app:layout_constraintStart_toStartOf="parent" />
@@ -51,11 +51,11 @@
             android:id="@+id/buttonOdeme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="62dp"
+            android:layout_marginBottom="32dp"
             android:background="@drawable/login_edittext_background"
             android:onClick="@{() -> cartScreenFragment.siparisDone(buttonOdeme)}"
             android:text="@string/cartFinishButton"
-            android:textSize="34dp"
+            android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginBottom="220dp"
+            android:layout_marginBottom="90dp"
             android:ems="10"
             android:fontFamily="@font/open_sans"
             android:gravity="top"
@@ -78,7 +78,7 @@
             android:nestedScrollingEnabled="false"
             android:scrollbars="vertical"
             android:textColor="@color/cartScreenTextColor"
-            android:textSize="40dp"
+            android:textSize="18dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -88,11 +88,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginBottom="180dp"
+            android:layout_marginBottom="120dp"
             android:fontFamily="@font/open_sans"
             android:padding="10dp"
             android:text="@string/cartDeliveryTime"
-            android:textSize="48dp"
+            android:textSize="22dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/textViewSiparisAdresi"
             app:layout_constraintStart_toStartOf="parent" />
@@ -118,7 +118,7 @@
                 android:padding="10dp"
                 android:text="@string/cartOnlinePayment"
                 android:textColor="@color/cartScreenTextColor"
-                android:textSize="40dp" />
+                android:textSize="20dp" />
 
             <RadioButton
                 android:id="@+id/radioButtonNakit"
@@ -129,7 +129,7 @@
                 android:padding="10dp"
                 android:text="@string/cartCashDeliveryPayment"
                 android:textColor="@color/cartScreenTextColor"
-                android:textSize="40dp" />
+                android:textSize="20dp" />
 
             <RadioButton
                 android:id="@+id/radioButtonKart"
@@ -140,7 +140,7 @@
                 android:padding="10dp"
                 android:text="@string/cartCardDeliveryPayment"
                 android:textColor="@color/cartScreenTextColor"
-                android:textSize="40dp" />
+                android:textSize="20dp" />
         </RadioGroup>
 
         <RadioGroup
@@ -164,7 +164,7 @@
                 android:padding="10dp"
                 android:text="@string/cartDeliveryNow"
                 android:textColor="@color/cartScreenTextColor"
-                android:textSize="40dp" />
+                android:textSize="20dp" />
 
             <RadioButton
                 android:id="@+id/radioButtonIerdeGelsin"
@@ -174,7 +174,7 @@
                 android:padding="10dp"
                 android:text="@string/cartDeliveryAhead"
                 android:textColor="@color/cartScreenTextColor"
-                android:textSize="40dp" />
+                android:textSize="20dp" />
         </RadioGroup>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
