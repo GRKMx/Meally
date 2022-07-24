@@ -54,25 +54,14 @@ class ProfileScreen : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profile_screen, container, false)
         binding.profileScreenFragment = this
+        binding.textViewEmail.text = USEREMAIL
+        binding.textViewProfileName.text = USERNAME
+        registerLauncher()
         auth= Firebase.auth
         firestore=Firebase.firestore
         storage=Firebase.storage
         db=Firebase.firestore
         getData()
-        binding.textViewEmail.text = USEREMAIL
-        binding.textViewProfileName.text = USERNAME
-        intentToGallery()
-
-        /*
-        binding.switchNightLight.setOnCheckedChangeListener { compoundButton, b ->
-            if (b) {
-                (activity as AppCompatActivity).delegate.localNightMode = AppCompatDelegate.MODE_NIGHT_NO
-            } else {
-                (activity as AppCompatActivity).delegate.localNightMode = AppCompatDelegate.MODE_NIGHT_YES
-            }
-        }
-         */
-
         return binding.root
     }
 
@@ -131,7 +120,7 @@ class ProfileScreen : Fragment() {
         }
     }
 
-    private fun intentToGallery(){
+    private fun registerLauncher(){
         activityResultLauncher=registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
             if(result.resultCode== AppCompatActivity.RESULT_OK){
                 val intentFromResult=result.data
@@ -172,6 +161,7 @@ class ProfileScreen : Fragment() {
                             uriList.add(downloadUrl)
                         }
                         if (uriList.isNotEmpty()){
+                            Log.e("profilepicture","profilepicture uri: ${uriList.last().toUri()}")
                             Picasso.get().load("${uriList.last().toUri()}").into(binding.imageView)
                         }
                     }

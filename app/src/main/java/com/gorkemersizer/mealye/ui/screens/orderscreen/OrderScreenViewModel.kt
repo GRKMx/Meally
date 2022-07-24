@@ -1,9 +1,12 @@
 package com.gorkemersizer.mealye.ui.screens.orderscreen
 
+import android.view.View
+import androidx.core.view.isVisible
 import androidx.lifecycle.*
 import androidx.recyclerview.widget.RecyclerView
 import com.gorkemersizer.mealye.data.entity.SepetYemekler
 import com.gorkemersizer.mealye.data.repo.YemeklerDaoRepository
+import com.gorkemersizer.mealye.util.Constants
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

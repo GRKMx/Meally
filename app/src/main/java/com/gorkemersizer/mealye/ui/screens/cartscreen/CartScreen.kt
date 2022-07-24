@@ -16,6 +16,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import com.gorkemersizer.mealye.R
 import com.gorkemersizer.mealye.databinding.FragmentCartScreenBinding
+import com.gorkemersizer.mealye.util.Constants
 import com.gorkemersizer.mealye.util.gecisYap
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_cart_screen.*
@@ -64,6 +65,10 @@ class CartScreen : Fragment() {
         if (binding.editTextAdres.text.toString() == "" || binding.editTextAdres.text.toString().isEmpty() ||  binding.editTextAdres.text.toString().isBlank() ){
             Toast.makeText(context,"Enter delivery address", Toast.LENGTH_LONG).show()
         } else {
+            for (i in viewModel.sepetListesi.value!!) {
+                viewModel.yemekSilVM(i.sepet_yemek_id.toInt(), Constants.USERNAME)
+                
+            }
             Navigation.gecisYap(v, R.id.action_mainViewPagerFragment_to_orderDoneScreen)
         }
     }
