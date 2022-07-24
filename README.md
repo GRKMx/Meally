@@ -1,5 +1,6 @@
 # Meally
-...
+
+Meally waits to meet you...
 
 ![image](https://user-images.githubusercontent.com/79326983/180656514-8093e4c6-03b3-4c63-a76f-1a359f07e084.png)
 ![image](https://user-images.githubusercontent.com/79326983/180656522-8bce7f61-5848-4da1-aed5-5c24aab5f0ae.png)
